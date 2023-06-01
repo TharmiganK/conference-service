@@ -31,11 +31,9 @@ public type ConferenceRequest record{|
 
 # Represents a extended conference
 # 
-# + id - The id of the conference
 # + name - The name of the conference
 # + country - The country of the conference
 public type ExtendedConference record{|
-    int id;
     string name;
     string country;
 |};
@@ -57,6 +55,10 @@ public type Country record {|
     string name;
 |};
 
+# Represents a Error Detail
+# 
+# + message - The message of the error
+# + cause - The cause of the error
 public type ErrorDetail record {|
     string message;
     string cause;

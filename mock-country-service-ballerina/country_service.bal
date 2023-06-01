@@ -21,13 +21,18 @@ final readonly & map<string> conferences = {
 
 service on new http:Listener(countryServicePort) {
 
-    isolated resource function get conferences/[string name]/country() returns string|ConferenceNotFound {
+    isolated resource function get conferences/[string name]/country() returns Country|ConferenceNotFound {
 
-        return conferences[name] ?: {
-            body: {
+        string? countryName = conferences[name];
+        if countryName is string {
+            return { name: countryName };
+        } else {
+            return {
+                body: {
                 message: "Error ocurred while retrieving the country for the conference: " + name,
                 cause: "No conference found with the name: " + name
             }
-        };
+            };
+        }
     }
 }

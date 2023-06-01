@@ -1,0 +1,16 @@
+### Request 1
+
+GET http://localhost:8102/conferences
+
+### Request 2
+
+POST http://localhost:8102/conferences
+Content-Type: application/json
+
+{
+    "name": "WSO2Con"
+}
+
+### Request 3
+
+GET http://localhost:8102/conferenceswithcountry

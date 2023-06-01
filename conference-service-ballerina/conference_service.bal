@@ -97,17 +97,19 @@ isolated function getAllConferencesWithCountry() returns ExtendedConference[]|er
     Conference[] conferences = check getAllConferences();
     return from Conference conference in conferences
         select {
-            ...conference,
+            name: conference.name,
             country: check getCountry(conference.name)
         };
 }
 
 isolated function getCountry(string conferenceName) returns string|error {
 
-    return check countryClient->/conferences/[conferenceName]/country;
+    Country country = check countryClient->/conferences/[conferenceName]/country;
+    return country.name;
 }
 
 public function main() returns error? {
+    check initDB();
     log:printInfo("Starting the listener...");
     // Attach the service to the listener.
     check conferenceListener.attach(new ConferenceService());
@@ -116,4 +118,9 @@ public function main() returns error? {
     // Register the listener dynamically.
     runtime:registerListener(conferenceListener);
     log:printInfo(string `Startup completed. Listening on: http://locahost:${conferenceServicePort}`);
+}
+
+function initDB() returns error? {
+    _ = check conferenceDbClient->execute(`DROP TABLE IF EXISTS conferences`);
+    _ = check conferenceDbClient->execute(`CREATE TABLE conferences (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255))`);
 }
