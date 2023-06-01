@@ -1,2 +1,3 @@
-# conference-service
+# Conference Service
+
 A RESTful service example

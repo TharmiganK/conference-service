@@ -1,0 +1,9 @@
+# The conference service
+conferenceServicePort = 9090
+countryServiceUrl = "http://localhost:8080"
+
+# The database configs
+[dbConfigs]
+dbFilePath = "./db/h2"
+user = "admin"
+password = "admin"
