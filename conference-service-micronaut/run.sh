@@ -11,3 +11,10 @@ pid=$!
 echo ""
 echo "[INFO] process started with PID $pid"
 echo ""
+
+stop_process() {
+  kill $pid
+  exit 0
+}
+trap stop_process INT
+wait $pid
