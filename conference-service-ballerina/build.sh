@@ -13,12 +13,17 @@ fi
 echo ""
 echo "time = $(gdate +"%Y-%m-%dT%H:%M:%S.%3N")+05:30 level = INFO module = user/conference_service_ballerina message = Ballerina application built successfully"
 echo ""
-sleep 5
+# sleep 5
 
-echo "time = $(gdate +"%Y-%m-%dT%H:%M:%S.%3N")+05:30 level = INFO module = user/conference_service_ballerina message = Executing the Ballerina application"
-if [ "$1" = "graalvm" ];
-then
-    ./target/bin/conference_service_ballerina
-else
-    java -jar ./target/bin/conference_service_ballerina.jar 
-fi
+# echo "time = $(gdate +"%Y-%m-%dT%H:%M:%S.%3N")+05:30 level = INFO module = user/conference_service_ballerina message = Executing the Ballerina application"
+# if [ "$1" = "graalvm" ];
+# then
+#     ./target/bin/conference_service_ballerina &
+# else
+#     java -jar ./target/bin/conference_service_ballerina.jar &
+# fi
+
+# pid=$!
+# echo ""
+# echo "[INFO] process started with PID $pid"
+# echo ""

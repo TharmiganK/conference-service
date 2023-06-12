@@ -15,5 +15,5 @@ echo "time = $(gdate +"%Y-%m-%dT%H:%M:%S.%3N")+05:30 level = INFO module = user/
 echo ""
 sleep 5
 
-echo "time = $(gdate +"%Y-%m-%dT%H:%M:%S.%3N")+05:30 level = INFO module = user/conference_service_ballerina message = Running the docker image"
-docker run -d conference_service_ballerina:latest
+# echo "time = $(gdate +"%Y-%m-%dT%H:%M:%S.%3N")+05:30 level = INFO module = user/conference_service_ballerina message = Running the docker image"
+# docker run -d conference_service_ballerina:latest
