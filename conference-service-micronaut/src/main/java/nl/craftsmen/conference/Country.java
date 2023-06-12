@@ -1,5 +1,8 @@
 package nl.craftsmen.conference;
 
+import io.micronaut.core.annotation.ReflectiveAccess;
+
+@ReflectiveAccess
 public class Country {
 
     private String name;
