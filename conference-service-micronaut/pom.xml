@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>nl.craftsmen.conference</groupId>
-  <artifactId>service</artifactId>
-  <version>0.1</version>
+  <artifactId>conference_service_micronaut</artifactId>
+  <version>1.0</version>
   <packaging>${packaging}</packaging>
   <parent>
     <groupId>io.micronaut</groupId>
@@ -141,7 +141,7 @@
             <arg>
               -Amicronaut.processing.group=nl.craftsmen.conference
             </arg>
-            <arg>-Amicronaut.processing.module=service</arg>
+            <arg>-Amicronaut.processing.module=conference_service_micronaut</arg>
           </compilerArgs>
         </configuration>
       </plugin>

@@ -1,10 +1,10 @@
 ### Request 1
 
-GET http://localhost:8101/conferences
+GET http://localhost:8100/conferences
 
 ### Request 2
 
-POST http://localhost:8101/conferences
+POST http://localhost:8100/conferences
 Content-Type: application/json
 
 {
@@ -13,4 +13,4 @@ Content-Type: application/json
 
 ### Request 3
 
-GET http://localhost:8101/conferenceswithcountry
+GET http://localhost:8100/conferenceswithcountry
