@@ -19,7 +19,9 @@ final readonly & map<string> conferences = {
     "Microsoft Ignite": "USA"
 };
 
-service on new http:Listener(countryServicePort) {
+listener http:Listener countryServiceEP = check new(countryServicePort);
+
+service on countryServiceEP {
 
     isolated resource function get conferences/[string name]/country() returns Country|ConferenceNotFound {
 
