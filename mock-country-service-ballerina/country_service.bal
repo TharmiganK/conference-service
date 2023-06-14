@@ -21,9 +21,9 @@ final readonly & map<string> conferences = {
 
 listener http:Listener countryServiceEP = check new(countryServicePort);
 
-service on countryServiceEP {
+service /conferences on countryServiceEP {
 
-    isolated resource function get conferences/[string name]/country() returns Country|ConferenceNotFound {
+    isolated resource function get [string name]/country() returns Country|ConferenceNotFound {
 
         string? countryName = conferences[name];
         if countryName is string {
