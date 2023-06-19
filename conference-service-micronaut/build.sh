@@ -2,28 +2,26 @@
 
 if [ "$1" = "graalvm" ];
 then
-    ./mvnw clean package -Dpackaging=native-image
+    if [ "$2" = "optimized" ];
+    then
+        ./mvnw clean package -Dpackaging=native-image -Dmicronaut.aot.enabled=true -Dmicronaut.aot.runtime=native -Dmicronaut.aot.packageName=conference_service_micronaut
+    else
+        ./mvnw clean package -Dpackaging=native-image
+    fi
 else
-    ./mvnw clean package
+    if [ "$1" = "optimized" ];
+    then
+        ./mvnw clean package -Dmicronaut.aot.enabled=true -Dmicronaut.aot.packageName=conference_service_micronaut
+    else
+        ./mvnw clean package
+    fi
 fi
 
 # sleep 5
 
 # if [ "$1" = "graalvm" ];
 # then
-#     ./target/conference_service_micronaut &
+#     ./target/conference_service_micronaut
 # else
-#     java -jar ./target/conference_service_micronaut-1.0.jar &
+#     java -jar ./target/conference_service_micronaut-1.0.jar
 # fi
-
-# pid=$!
-# echo ""
-# echo "[INFO] process started with PID $pid"
-# echo ""
-
-# stop_process() {
-#   kill $pid
-#   exit 0
-# }
-# trap stop_process INT
-# wait $pid

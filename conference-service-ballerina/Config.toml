@@ -1,6 +1,7 @@
 # The conference service
 conferenceServicePort = 8102
 countryServiceUrl = "http://localhost:9000"
+# countryServiceUrl = "http://country:9000"
 
 # The database configs
 [dbConfigs]
