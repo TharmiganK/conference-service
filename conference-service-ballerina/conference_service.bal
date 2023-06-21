@@ -23,7 +23,7 @@ final http:Client countryClient = check new (countryServiceUrl,
 );
 
 configurable h2dbConfigs dbConfigs = ?;
-final jdbc:Client conferenceDbClient = check new ("jdbc:h2:file:" + dbConfigs.dbFilePath, dbConfigs.user, dbConfigs.password);
+final jdbc:Client conferenceDbClient = check new ("jdbc:h2:mem:" + dbConfigs.dbName, dbConfigs.user, dbConfigs.password);
 
 service class ConferenceService {
     *http:Service;

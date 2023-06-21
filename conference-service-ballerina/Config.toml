@@ -5,6 +5,6 @@ countryServiceUrl = "http://localhost:9000"
 
 # The database configs
 [dbConfigs]
-dbFilePath = "./db/h2"
+dbName = "conferencedb"
 user = "admin"
 password = "admin"

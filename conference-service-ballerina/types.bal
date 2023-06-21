@@ -6,11 +6,11 @@ import ballerina/constraint;
 #
 # + user - The user of the database  
 # + password - The password of the database  
-# + dbFilePath - The file path of the database
+# + dbName - The file path of the database
 public type h2dbConfigs record {|
     string user;
     string password;
-    string dbFilePath;
+    string dbName;
 |};
 
 # Represents a conference
