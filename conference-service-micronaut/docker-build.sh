@@ -11,8 +11,8 @@ then
 else
     if [ "$1" = "optimized" ];
     then
-        ./mvnw clean package -Dpackaging=docker-native -Dmicronaut.aot.enabled=true -Dmicronaut.aot.packageName=conference_service_micronaut
+        ./mvnw clean package -Dpackaging=docker -Dmicronaut.aot.enabled=true -Dmicronaut.aot.packageName=conference_service_micronaut
     else
-        ./mvnw clean package -Dpackaging=docker-native
+        ./mvnw clean package -Dpackaging=docker
     fi
 fi
