@@ -18,7 +18,7 @@ public type h2dbConfigs record {|
 # + id - The id of the conference
 # + name - The name of the conference
 public type Conference record{|
-    readonly & int id;
+    readonly int id;
     string name;
 |};
 
