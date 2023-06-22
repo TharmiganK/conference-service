@@ -5,8 +5,10 @@ echo ""
 
 if [ "$1" = "graalvm" ];
 then
+    bal clean
     bal build --native
 else
+    bal clean
     bal build
 fi
 
