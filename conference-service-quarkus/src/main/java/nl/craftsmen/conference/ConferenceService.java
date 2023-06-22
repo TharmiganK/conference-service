@@ -14,8 +14,6 @@ public class ConferenceService {
     @Inject
     private ConferenceRepository conferenceRepository;
 
-    //private ConferencePanacheRepository conferenceRepository;
-
     @Inject
     @RestClient
     CountryClient countryClient;
@@ -28,17 +26,6 @@ public class ConferenceService {
         conferenceRepository.save(conference);
 
     }
-
-
-
-
-
-
-
-
-
-
-
 
     public List<ExtendedConference> getAllWithCountry() {
         List<Conference> conferences = this.getAll();

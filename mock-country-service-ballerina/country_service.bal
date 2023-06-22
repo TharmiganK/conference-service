@@ -1,3 +1,5 @@
+import ballerina/log;
+import ballerina/lang.runtime;
 import ballerina/http;
 
 configurable int countryServicePort = ?;
@@ -21,7 +23,8 @@ final readonly & map<string> conferences = {
 
 listener http:Listener countryServiceEP = check new(countryServicePort);
 
-service /conferences on countryServiceEP {
+service class CountryService {
+    *http:Service;
 
     isolated resource function get [string name]/country() returns Country|ConferenceNotFound {
 
@@ -37,4 +40,15 @@ service /conferences on countryServiceEP {
             };
         }
     }
+}
+
+public function main() returns error? {
+    log:printInfo("Starting the listener...");
+    // Attach the service to the listener.
+    check countryServiceEP.attach(new CountryService(), "conferences");
+    // Start the listener.
+    check countryServiceEP.'start();
+    // Register the listener dynamically.
+    runtime:registerListener(countryServiceEP);
+    log:printInfo(string `Startup completed. Listening on: http://localhost:${countryServicePort}`);
 }
