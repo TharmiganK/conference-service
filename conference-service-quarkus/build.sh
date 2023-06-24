@@ -1,10 +1,12 @@
 #!/bin/bash
 
+./mvnw clean
+
 if [ "$1" = "graalvm" ];
 then
-    ./mvnw clean install -Dnative -Dquarkus.native.builder-image=graalvm
+    ./mvnw install -Dnative -Dquarkus.native.builder-image=graalvm
 else
-    ./mvnw clean package -Dquarkus.package.type=uber-jar
+    ./mvnw package -Dquarkus.package.type=uber-jar
 fi
 
 # sleep 5
