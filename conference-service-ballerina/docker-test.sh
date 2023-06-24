@@ -1,7 +1,12 @@
 #!/bin/bash
 
 echo "RSS after start up"
-sh ./rss.sh now
+if [ "$1" = "graalvm" ];
+then
+    sh ./docker-stats.sh now conference_service_ballerina
+else
+    sh ./docker-stats.sh now conference_service_ballerina_1
+fi
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8102/conferences --header 'Content-Type: application/json' --data '{"name": "WSO2Con"}')
@@ -12,7 +17,12 @@ echo "Response Time 1: $response_time"
 echo ""
 
 echo "RSS after first request"
-sh ./rss.sh now
+if [ "$1" = "graalvm" ];
+then
+    sh ./docker-stats.sh now conference_service_ballerina
+else
+    sh ./docker-stats.sh now conference_service_ballerina_1
+fi
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8102/conferences --header 'Content-Type: application/json' --data '{"name": "Strata"}')
@@ -45,7 +55,12 @@ echo "GET Response Time 5: $response_time"
 echo ""
 
 echo "RSS after five requests"
-sh ./rss.sh now
+if [ "$1" = "graalvm" ];
+then
+    sh ./docker-stats.sh now conference_service_ballerina
+else
+    sh ./docker-stats.sh now conference_service_ballerina_1
+fi
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8102/conferences --header 'Content-Type: application/json' --data '{"name": "IBM Think"}')
@@ -86,4 +101,9 @@ echo "GET Response Time 5: $response_time"
 echo ""
 
 echo "RSS after ten requests"
-sh ./rss.sh now
+if [ "$1" = "graalvm" ];
+then
+    sh ./docker-stats.sh now conference_service_ballerina
+else
+    sh ./docker-stats.sh now conference_service_ballerina_1
+fi
