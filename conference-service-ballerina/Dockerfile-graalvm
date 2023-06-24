@@ -10,11 +10,11 @@ RUN sh build-native.sh conference_service_ballerina.jar conference_service_balle
 FROM debian:11-slim
 
 RUN useradd -ms /bin/bash ballerina
+RUN apt-get install coreutils
 WORKDIR /home/ballerina
-
 
 USER ballerina
 
 COPY --from=build /app/build/conference_service_ballerina .
 
-CMD echo "time = $(date +"%Y-%m-%dT%H:%M:%S.%3NZ") level = INFO module = tharmigan/country_service_ballerina message = Executing the Ballerina application" && "./conference_service_ballerina"
+CMD echo "time = $(date +"%Y-%m-%dT%H:%M:%S.%3NZ") level = INFO module = tharmigan/conference_service_ballerina message = Executing the Ballerina application" && "./conference_service_ballerina"

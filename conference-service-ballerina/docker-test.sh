@@ -107,3 +107,12 @@ then
 else
     sh ./docker-stats.sh now conference_service_ballerina_1
 fi
+
+echo ""
+echo "Stopping container"
+if [ "$1" = "graalvm" ];
+then
+    docker stop conference_service_ballerina
+else
+    docker stop conference_service_ballerina_1
+fi

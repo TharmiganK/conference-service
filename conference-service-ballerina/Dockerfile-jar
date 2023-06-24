@@ -6,7 +6,8 @@ LABEL maintainer="dev@ballerina.io"
 RUN addgroup troupe \
     && adduser -S -s /bin/bash -g 'ballerina' -G troupe -D ballerina \
     && apk add --update --no-cache bash \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
+    && apk add coreutils
 
 WORKDIR /home/ballerina
 
@@ -14,4 +15,4 @@ COPY target/bin/conference_service_ballerina.jar .
 
 USER ballerina
 
-CMD echo "time = $(date +"%Y-%m-%dT%H:%M:%S.%3NZ") level = INFO module = tharmigan/country_service_ballerina message = Executing the Ballerina application" && java -jar conference_service_ballerina.jar
+CMD echo "time = $(date +"%Y-%m-%dT%H:%M:%S.%3NZ") level = INFO module = tharmigan/conference_service_ballerina message = Executing the Ballerina application" && java -jar conference_service_ballerina.jar
