@@ -2,7 +2,6 @@ package tharmigan.springboot.conference_service;
 
 import org.springframework.aot.hint.annotation.RegisterReflectionForBinding;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +19,6 @@ public class ConferenceController {
     @Autowired
     private ConferenceRepository conferenceRepository;
 
-    @Value("${country.service.url}")
     private final String countryServiceUrl = "http://localhost:9000";
 
     private final RestTemplate restTemplate = new RestTemplate();
