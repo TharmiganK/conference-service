@@ -5,7 +5,7 @@ echo ""
 
 if [ "$1" = "graalvm" ];
 then
-    bal build --native --cloud=docker
+    bal build --graalvm --cloud=docker
 else
     bal build --cloud=docker
 fi

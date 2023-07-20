@@ -6,7 +6,7 @@ echo ""
 if [ "$1" = "graalvm" ];
 then
     bal clean
-    bal build --native
+    bal build --graalvm
 else
     bal clean
     bal build
