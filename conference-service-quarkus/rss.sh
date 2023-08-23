@@ -2,11 +2,11 @@
 
 if [ "$1" = "now" ];
 then
-    ps -o pid,rss,command | grep conference_service_quarkus | awk '{$2=int($2/1024)"M";}{ print;}'
+    ps aux | grep conference_service_quarkus | awk '{$6=($6/1024)"M";}{$3=($3*8/100)"cores";}{ print $3, $6, $11, $12, $13;}'
     exit 0
 fi
 
 while true; do
-    ps -o pid,rss,command | grep conference_service_quarkus | awk '{$2=int($2/1024)"M";}{ print;}'
+    ps aux | grep conference_service_quarkus | awk '{$6=($6/1024)"M";}{$3=($3*8/100)"cores";}{ print $3, $6, $11, $12, $13;}'
     sleep 1
 done
