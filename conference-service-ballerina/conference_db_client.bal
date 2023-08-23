@@ -1,8 +1,7 @@
 import ballerinax/java.jdbc;
-// TODO : Replace this with `ballerinax/h2.driver` once the package is released
 import ballerina/sql;
 import ballerina/http;
-import tharmigank/h2.driver as _;
+import ballerinax/h2.driver as _;
 
 # Represents the configuration of the h2 database
 #
