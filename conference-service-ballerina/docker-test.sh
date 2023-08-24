@@ -2,11 +2,7 @@
 
 echo "RSS after start up"
 if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_ballerina
-else
-    sh ./docker-stats.sh now conference_service_ballerina_1
-fi
+sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8102/conferences --header 'Content-Type: application/json' --data '{"name": "WSO2Con"}')
@@ -17,12 +13,7 @@ echo "Response Time 1: $response_time"
 echo ""
 
 echo "RSS after first request"
-if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_ballerina
-else
-    sh ./docker-stats.sh now conference_service_ballerina_1
-fi
+sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8102/conferences --header 'Content-Type: application/json' --data '{"name": "Strata"}')
@@ -55,12 +46,7 @@ echo "GET Response Time 5: $response_time"
 echo ""
 
 echo "RSS after five requests"
-if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_ballerina
-else
-    sh ./docker-stats.sh now conference_service_ballerina_1
-fi
+sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8102/conferences --header 'Content-Type: application/json' --data '{"name": "IBM Think"}')
@@ -101,18 +87,8 @@ echo "GET Response Time 5: $response_time"
 echo ""
 
 echo "RSS after ten requests"
-if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_ballerina
-else
-    sh ./docker-stats.sh now conference_service_ballerina_1
-fi
+sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""
 echo "Stopping container"
-if [ "$1" = "graalvm" ];
-then
-    docker stop conference_service_ballerina
-else
-    docker stop conference_service_ballerina_1
-fi
+docker stop conference-service-ballerina
