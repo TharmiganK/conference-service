@@ -8,12 +8,12 @@ This directory contains the Ballerina version of the Conference Service.
     - **Option 1:** Run the following command inside the `mock-country-service-ballerina` directory.
 
         ```bash
-        $ bal run
+        bal run
         ```
     - **Option 2:** Run the following Docker image.
 
         ```bash
-        $ docker run --network host --rm ktharmi176/country-service:latest
+        docker run --network host --rm ktharmi176/country-service:latest
         ```
 
 ## Table of Contents
@@ -36,13 +36,13 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 1:** Run the following `bal` command.
 
     ```bash
-    $ bal build
+    bal build
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above).
     
     ```bash
-    $ sh build.sh
+    sh build.sh
     ```
 
 ### Running the service
@@ -50,13 +50,13 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 1:** Run the following `bal` command.
 
     ```bash
-    $ bal run target/bin/conference_service_ballerina.jar
+    bal run target/bin/conference_service_ballerina.jar
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above. In addition it will print a log before running the JAR file).
     
     ```bash
-    $ sh run.sh
+    sh run.sh
     ```
 
 ### Testing the service
@@ -68,7 +68,7 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 2:** Run the script file. This will make several requests to the endpoint and will print the response code, and the response time. In addition, this will print the RSS and the CPU usage of the service.
 
     ```bash
-    $ sh test.sh
+    sh test.sh
     ```
 
 ## Running the service locally using the GraalVM executable
@@ -81,7 +81,7 @@ This directory contains the Ballerina version of the Conference Service.
 - Install the `native-image` tool using the following command.
 
     ```bash
-    $ gu install native-image
+    gu install native-image
     ```
 - Set the `GRAALVM_HOME` environment variable to point to the GraalVM installation directory.
 
@@ -90,19 +90,19 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 1:** Run the following `bal` command.
 
     ```bash
-    $ ballerina build --graalvm
+    ballerina build --graalvm
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above).
     
     ```bash
-    $ sh build.sh graalvm
+    sh build.sh graalvm
     ```
 
 - **Option 3:** Build the JAR file and run the following code.
 
     ```bash
-    $ native-image -jar target/bin/conference_service_ballerina.jar --no-fallback
+    native-image -jar target/bin/conference_service_ballerina.jar --no-fallback
     ```
 
 ### Running the service
@@ -110,13 +110,13 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 1:** Run the executable directly.
 
     ```bash
-    $ ./target/bin/conference_service_ballerina
+    ./target/bin/conference_service_ballerina
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above. In addition it will print a log before running the executable).
     
     ```bash
-    $ sh run.sh graalvm
+    sh run.sh graalvm
     ```
 
 ### Testing the service
@@ -128,7 +128,7 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 2:** Run the script file. This will make several requests to the endpoint and will print the response code, and the response time. In addition, this will print the RSS and the CPU usage of the service.
 
     ```bash
-    $ sh test.sh
+    sh test.sh
     ```
 
 ## Running the service in a Docker container with the JAR file
@@ -145,19 +145,19 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 1:** Run the following `bal` command.
 
     ```bash
-    $ bal build --cloud=docker
+    bal build --cloud=docker
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above).
     
     ```bash
-    $ sh docker-build.sh
+    sh docker-build.sh
     ```
 
 - **Option 3:** Build the JAR file and manually build the Docker image using the Dockerfile(which packs the uber JAR and will print a log before running the JAR file).
 
     ```bash
-    $ docker build -f Dockerfile-jar -t conference-service-ballerina:latest .
+    docker build -f Dockerfile-jar -t conference-service-ballerina:latest .
     ```
 
 ### Running the service
@@ -165,19 +165,19 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 1:** Run the Docker image manually.
 
     ```bash
-    $ docker run --name conference-service-ballerina --network host --rm conference-service-ballerina:latest
+    docker run --name conference-service-ballerina --network host --rm conference-service-ballerina:latest
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above).
     
     ```bash
-    $ sh docker-run.sh
+    sh docker-run.sh
     ```
 
 - **Option 3:** Run the pre-build Docker image from the Docker Hub.
 
     ```bash
-    $ docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.7.2-jar
+    docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.7.2-jar
     ```
 ### Testing the service
 
@@ -188,7 +188,7 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 2:** Run the script file. This will make several requests to the endpoint and will print the response code, and the response time. In addition, this will print the RSS and the CPU usage of the service and stop the containers after testing.
 
     ```bash
-    $ sh docker-test.sh
+    sh docker-test.sh
     ```
 
 ## Running the service in a Docker container with the GraalVM executable
@@ -205,38 +205,38 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 1:** Run the following `bal` command.
 
     ```bash
-    $ bal build --cloud=docker --graalvm
+    bal build --cloud=docker --graalvm
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above).
     
     ```bash
-    $ sh docker-build.sh graalvm
+    sh docker-build.sh graalvm
     ```
 
 - **Option 3:** Build the JAR file and manually build the Docker image using the Dockerfile(which packs the Mostly Static GraalVM executable).
 
     ```bash
-    $ docker build -f Dockerfile-graalvm -t conference-service-ballerina:latest .
+    docker build -f Dockerfile-graalvm -t conference-service-ballerina:latest .
     ```
 ### Running the service
 
 - **Option 1:** Run the Docker image manually.
 
     ```bash
-    $ docker run --name conference-service-ballerina --network host --rm conference-service-ballerina:latest
+    docker run --name conference-service-ballerina --network host --rm conference-service-ballerina:latest
     ```
 
 - **Option 2:** Run the script file(which runs the same command as above).
     
     ```bash
-    $ sh docker-run.sh
+    sh docker-run.sh
     ```
 
 - **Option 3:** Run the pre-build Docker image from the Docker Hub.
 
     ```bash
-    $ docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.7.2-graalvm
+    docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.7.2-graalvm
     ```
 
 ### Testing the service
@@ -248,5 +248,5 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 2:** Run the script file. This will make several requests to the endpoint and will print the response code, and the response time. In addition, this will print the RSS and the CPU usage of the service and stop the containers after testing.
 
     ```bash
-    $ sh docker-test.sh
+    sh docker-test.sh
     ```
