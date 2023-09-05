@@ -90,4 +90,4 @@ sh ./docker-stats.sh now conference-service-springboot
 
 echo ""
 echo "Stopping container"
-sh ./docker-stats.sh now conference-service-springboot
+docker stop conference-service-springboot
