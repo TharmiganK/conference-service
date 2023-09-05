@@ -68,3 +68,4 @@ nb-configuration.xml
 #Report
 comparison-report/*
 reports/*
+wrk*/*
