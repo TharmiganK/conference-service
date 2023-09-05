@@ -28,7 +28,7 @@ This directory contains the Ballerina version of the Conference Service.
 
 ### Prerequisites
 
-- Install [Ballerina 2201.7.2](https://ballerina.io/downloads/).
+- Install [Ballerina 2201.8.0](https://ballerina.io/downloads/).
 - Install [VSCode](https://code.visualstudio.com/) with the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 
 ### Building the JAR file
@@ -75,15 +75,9 @@ This directory contains the Ballerina version of the Conference Service.
 
 ### Prerequisites
 
-- Install [Ballerina 2201.7.2](https://ballerina.io/downloads/). Make sure you install Ballerina using the installer compatible with your OS.
+- Install [Ballerina 2201.8.0](https://ballerina.io/downloads/). Make sure you install Ballerina using the installer compatible with your OS.
 - Install [VSCode](https://code.visualstudio.com/) with the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
-- Install [GraalVM CE 22.3.3(Java 11)](https://github.com/graalvm/graalvm-ce-builds/releases?q=JDK+11&expanded=true) or above. See the [instructions](https://www.graalvm.org/22.3/docs/getting-started/#install-graalvm) for more details.
-- Install the `native-image` tool using the following command.
-
-    ```bash
-    gu install native-image
-    ```
-- Set the `GRAALVM_HOME` environment variable to point to the GraalVM installation directory.
+- Install and Configure GraalVM. See the [Configure GraalVM](https://ballerina.io/learn/build-the-executable-locally/#configure-graalvm) section for more details.
 
 ### Building the GraalVM executable
 
@@ -135,7 +129,7 @@ This directory contains the Ballerina version of the Conference Service.
 
 ### Prerequisites
 
-- Install [Ballerina 2201.7.2](https://ballerina.io/downloads/).
+- Install [Ballerina 2201.8.0](https://ballerina.io/downloads/).
 - Install [VSCode](https://code.visualstudio.com/) with the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 - Install [Docker](https://docs.docker.com/get-docker/).
 - Increase the memory limit of Docker.
@@ -177,7 +171,7 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 3:** Run the pre-build Docker image from the Docker Hub.
 
     ```bash
-    docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.7.2-jar
+    docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.8.0-jar
     ```
 ### Testing the service
 
@@ -195,7 +189,7 @@ This directory contains the Ballerina version of the Conference Service.
 
 ### Prerequisites
 
-- Install [Ballerina 2201.7.2](https://ballerina.io/downloads/). Make sure you install Ballerina using the installer compatible with your OS.
+- Install [Ballerina 2201.8.0](https://ballerina.io/downloads/). Make sure you install Ballerina using the installer compatible with your OS.
 - Install [VSCode](https://code.visualstudio.com/) with the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 - Install [Docker](https://docs.docker.com/get-docker/).
 - Increase the memory limit of Docker.
@@ -236,7 +230,7 @@ This directory contains the Ballerina version of the Conference Service.
 - **Option 3:** Run the pre-build Docker image from the Docker Hub.
 
     ```bash
-    docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.7.2-graalvm
+    docker run --name conference-service-ballerina --network host --rm ktharmi176/conference-service-ballerina:2201.8.0-graalvm
     ```
 
 ### Testing the service

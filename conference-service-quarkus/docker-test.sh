@@ -1,12 +1,7 @@
 #!/bin/bash
 
-echo "RSS after start up"
-if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_quarkus
-else
-    sh ./docker-stats.sh now conference_service_quarkus_1
-fi
+echo "Memory usage after start up"
+sh ./docker-stats.sh now conference-service-quarkus
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8100/conferences --header 'Content-Type: application/json' --data '{"name": "WSO2Con"}')
@@ -16,13 +11,8 @@ echo "Response Code 1: $response_code"
 echo "Response Time 1: $response_time"
 echo ""
 
-echo "RSS after first request"
-if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_quarkus
-else
-    sh ./docker-stats.sh now conference_service_quarkus_1
-fi
+echo "Memory usage after first request"
+sh ./docker-stats.sh now conference-service-quarkus
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8100/conferences --header 'Content-Type: application/json' --data '{"name": "Strata"}')
@@ -54,13 +44,8 @@ echo "GET Response Code 5: $response_code"
 echo "GET Response Time 5: $response_time"
 echo ""
 
-echo "RSS after five requests"
-if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_quarkus
-else
-    sh ./docker-stats.sh now conference_service_quarkus_1
-fi
+echo "Memory usage after five requests"
+sh ./docker-stats.sh now conference-service-quarkus
 
 echo ""
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8100/conferences --header 'Content-Type: application/json' --data '{"name": "IBM Think"}')
@@ -100,19 +85,9 @@ echo "GET Response Code 5: $response_code"
 echo "GET Response Time 5: $response_time"
 echo ""
 
-echo "RSS after ten requests"
-if [ "$1" = "graalvm" ];
-then
-    sh ./docker-stats.sh now conference_service_quarkus
-else
-    sh ./docker-stats.sh now conference_service_quarkus_1
-fi
+echo "Memory usage after ten requests"
+sh ./docker-stats.sh now conference-service-quarkus
 
 echo ""
 echo "Stopping container"
-if [ "$1" = "graalvm" ];
-then
-    docker stop conference_service_quarkus
-else
-    docker stop conference_service_quarkus_1
-fi
+docker stop conference-service-quarkus

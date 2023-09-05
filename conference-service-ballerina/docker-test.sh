@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo "RSS after start up"
-if [ "$1" = "graalvm" ];
+sh docker-startup.sh
+
+echo "Memory usage after start up"
 sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""
@@ -12,7 +13,7 @@ echo "Response Code 1: $response_code"
 echo "Response Time 1: $response_time"
 echo ""
 
-echo "RSS after first request"
+echo "Memory usage after first request"
 sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""
@@ -45,7 +46,7 @@ echo "GET Response Code 5: $response_code"
 echo "GET Response Time 5: $response_time"
 echo ""
 
-echo "RSS after five requests"
+echo "Memory usage after five requests"
 sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""
@@ -86,7 +87,7 @@ echo "GET Response Code 5: $response_code"
 echo "GET Response Time 5: $response_time"
 echo ""
 
-echo "RSS after ten requests"
+echo "Memory usage after ten requests"
 sh ./docker-stats.sh now conference-service-ballerina
 
 echo ""

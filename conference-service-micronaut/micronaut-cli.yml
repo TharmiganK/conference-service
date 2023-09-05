@@ -1,6 +1,6 @@
 applicationType: default
-defaultPackage: nl.craftsmen.conference
+defaultPackage: tk.tharmi
 testFramework: junit
 sourceLanguage: java
 buildTool: maven
-features: [annotation-api, app-name, data, data-jdbc, graalvm, h2, hibernate-jpa, http-client, jackson-databind, java, java-application, jdbc-tomcat, junit, logback, maven, micronaut-validation, netty-server, readme, shade, yaml]
+features: [app-name, data, data-jpa, graalvm, h2, http-client-test, java, java-application, jdbc-hikari, junit, logback, lombok, maven, maven-enforcer-plugin, micronaut-aot, netty-server, properties, readme, serialization-jackson, shade, validation]

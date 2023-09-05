@@ -2,7 +2,7 @@ import ballerina/log;
 import ballerina/lang.runtime;
 import ballerina/http;
 
-configurable int countryServicePort = ?;
+configurable int countryServicePort = 9000;
 
 final readonly & map<string> conferences = {
     "WSO2Con": "Sri Lanka",

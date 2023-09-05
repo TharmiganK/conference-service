@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "RSS after start up"
+echo "Memory usage after start up"
 sh ./rss.sh now
 
 echo ""
@@ -11,7 +11,7 @@ echo "Response Code 1: $response_code"
 echo "Response Time 1: $response_time"
 echo ""
 
-echo "RSS after first request"
+echo "Memory usage after first request"
 sh ./rss.sh now
 
 echo ""
@@ -44,7 +44,7 @@ echo "GET Response Code 5: $response_code"
 echo "GET Response Time 5: $response_time"
 echo ""
 
-echo "RSS after five requests"
+echo "Memory usage after five requests"
 sh ./rss.sh now
 
 echo ""
@@ -85,5 +85,7 @@ echo "GET Response Code 5: $response_code"
 echo "GET Response Time 5: $response_time"
 echo ""
 
-echo "RSS after ten requests"
+echo "Memory usage after ten requests"
 sh ./rss.sh now
+
+pkill -f conference_service_springboot

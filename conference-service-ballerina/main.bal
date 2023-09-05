@@ -1,8 +1,8 @@
-import ballerina/log;
 import ballerina/http;
 import ballerina/lang.runtime;
+import ballerina/log;
 
-configurable int conferenceServicePort = ?;
+configurable int conferenceServicePort = 8102;
 
 public function main() returns error? {
     http:Listener conferenceListener = check new (conferenceServicePort);

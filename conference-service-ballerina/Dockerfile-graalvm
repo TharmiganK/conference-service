@@ -1,5 +1,5 @@
 # Auto Generated Dockerfile
-FROM ghcr.io/graalvm/native-image:ol8-java11-22.3.3 as build
+FROM ghcr.io/graalvm/native-image-community:17-ol8 as build
 
 WORKDIR /app/build
 
