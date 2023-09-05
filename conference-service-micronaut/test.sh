@@ -89,6 +89,6 @@ echo "Memory usage after ten requests"
 sh ./rss.sh now
 
 if [ "$1" = "stop" ]; then
-    sleep 15
+    sleep 5
     pkill -f conference_service_micronaut
 fi

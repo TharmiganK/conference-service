@@ -91,6 +91,6 @@ sh ./docker-stats.sh now conference-service-quarkus
 if [ "$1" = "stop" ]; then
     echo ""
     echo "Stopping container"
-    sleep 15
+    sleep 5
     docker stop conference-service-quarkus
 fi
