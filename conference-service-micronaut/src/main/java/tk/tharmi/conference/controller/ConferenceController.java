@@ -34,7 +34,7 @@ public class ConferenceController {
 
     @Post("/conferences")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Status(HttpStatus.CREATED)
+    @Status(HttpStatus.ACCEPTED)
     public void create(@Body Conference conference) {
         conferenceService.create(conference);
 

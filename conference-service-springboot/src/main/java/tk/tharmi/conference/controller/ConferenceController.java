@@ -24,7 +24,7 @@ public class ConferenceController {
     }
 
     @PostMapping("/conferences")
-    @ResponseStatus(code = HttpStatus.CREATED)
+    @ResponseStatus(code = HttpStatus.ACCEPTED)
     public void createConference(@RequestBody Conference conference) {
         conferenceService.create(conference);
     }

@@ -33,7 +33,7 @@ public class ConferenceController {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Conference conference) {
         conferenceService.create(conference);
-        return Response.status(Status.CREATED).build();
+        return Response.status(Status.ACCEPTED).build();
     }
 
     @GET
