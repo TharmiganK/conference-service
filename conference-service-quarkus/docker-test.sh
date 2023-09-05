@@ -88,6 +88,9 @@ echo ""
 echo "Memory usage after ten requests"
 sh ./docker-stats.sh now conference-service-quarkus
 
-echo ""
-echo "Stopping container"
-docker stop conference-service-quarkus
+if [ "$1" = "stop" ]; then
+    echo ""
+    echo "Stopping container"
+    sleep 15
+    docker stop conference-service-quarkus
+fi

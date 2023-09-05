@@ -88,4 +88,8 @@ echo ""
 echo "Memory usage after ten requests"
 sh ./rss.sh now
 
-pkill -f conference_service_ballerina
+if [ "$1" = "stop" ]; 
+then
+    sleep 15
+    pkill -f conference_service_ballerina
+fi

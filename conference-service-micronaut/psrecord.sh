@@ -1,0 +1,1 @@
+psrecord --plot plot.png --log log.txt --interval 0.1 $(ps aux | grep conference_service_micronaut | grep -v 'grep' | awk '{print $2}')

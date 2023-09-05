@@ -90,6 +90,9 @@ echo ""
 echo "Memory usage after ten requests"
 sh ./docker-stats.sh now conference-service-ballerina
 
-echo ""
-echo "Stopping container"
-docker stop conference-service-ballerina
+if [ "$1" = "stop" ]; then
+    echo ""
+    echo "Stopping container"
+    sleep 15
+    docker stop conference-service-ballerina
+fi
