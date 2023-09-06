@@ -6,9 +6,9 @@ if [ "$1" = "graalvm" ];
 then
     if [ "$2" = "optimized" ];
     then
-        ./mvnw package -Dpackaging=native-image -Dmicronaut.aot.enabled=true -Dmicronaut.aot.runtime=native -Dmicronaut.aot.packageName=conference_service_micronaut
+        ./mvnw package -Dpackaging=native-image -Dmicronaut.aot.enabled=true -Dmicronaut.aot.runtime=native -Dmicronaut.aot.packageName=conference_service_micronaut > build-graalvm.txt 2>&1
     else
-        ./mvnw package -Dpackaging=native-image
+        ./mvnw package -Dpackaging=native-image > build-graalvm.txt 2>&1
     fi
 else
     if [ "$1" = "optimized" ];
