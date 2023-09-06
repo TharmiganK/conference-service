@@ -4,13 +4,9 @@ import time
 import logging
 
 # Set up logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
-
-# Create a file handler to log to a file
-file_handler = logging.FileHandler('script.log')
-file_handler.setLevel(logging.INFO)
-file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s: %(message)s'))
-logging.getLogger().addHandler(file_handler)
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s: %(message)s"
+)
 
 # List of directories
 directories = [
@@ -23,7 +19,7 @@ directories = [
 # Loop through each directory
 for directory in directories:
     logging.info(f"Entering directory: {directory}")
-    
+
     # Step 1: Go inside the directory
     os.chdir("..")
     os.chdir(directory)
@@ -33,42 +29,81 @@ for directory in directories:
     # subprocess.run("sh clean.sh", shell=True, check=True)
 
     # Step 3: Run build.sh
-    logging.info(f"Running 'sh build.sh' in {directory}")
-    subprocess.run("sh build.sh graalvm", shell=True, check=True)
+    logging.info(f"Running JVM build in {directory}")
+    subprocess.run("sh build.sh", shell=True, check=True)
 
     # Step 3: Run the test loop
     for i in range(9):
         # Run run.sh
-        logging.info(f"Running 'sh run.sh' in {directory} (Iteration {i+1}/9)")
+        logging.info(f"Running JAR in {directory} (Iteration {i+1}/9)")
         subprocess.Popen(["sh", "run.sh", "graalvm"])
 
         # Wait for 5 seconds
         time.sleep(5)
 
         # Run test.sh stop
-        logging.info(f"Running 'sh test.sh stop' in {directory} (Iteration {i+1}/9)")
+        logging.info(f"Running tests on JAR in {directory} (Iteration {i+1}/9)")
         subprocess.run("sh test.sh stop graalvm", shell=True, check=True)
 
     # Step 4: Run the final test
     # Run run.sh
-    logging.info(f"Running 'sh run.sh' in {directory} (Iteration 10/10)")
+    logging.info(f"Running JAR in {directory} (Iteration 10/10)")
     subprocess.Popen(["sh", "run.sh", "graalvm"])
 
     # Wait for 5 seconds
     time.sleep(5)
 
     # Run psrecord.sh
-    logging.info(f"Running 'sh psrecord.sh' in {directory}")
+    logging.info(f"Running ps record for JAR in {directory}")
     subprocess.Popen(["sh", "psrecord.sh", "graalvm"])
 
     # Run test.sh
-    logging.info(f"Running 'sh test.sh' in {directory}")
+    logging.info(f"Running tests with JAR in {directory}")
     subprocess.run("sh test.sh graalvm", shell=True, check=True)
 
     # Run perf.sh
-    logging.info(f"Running 'sh perf.sh' in {directory}")
+    logging.info(f"Running throughput/latency tests with JAR in {directory}")
     subprocess.run("sh perf.sh graalvm", shell=True, check=True)
-    
+
+    logging.info(f"Exiting directory: {directory}")
+
+    # Step 3: Run build.sh
+    logging.info(f"Running GraalVM build in {directory}")
+    subprocess.run("sh build.sh graalvm", shell=True, check=True)
+
+    # Step 3: Run the test loop
+    for i in range(9):
+        # Run run.sh
+        logging.info(f"Running GraalVM native executable in {directory} (Iteration {i+1}/9)")
+        subprocess.Popen(["sh", "run.sh", "graalvm"])
+
+        # Wait for 5 seconds
+        time.sleep(5)
+
+        # Run test.sh stop
+        logging.info(f"Running tests with native executable in {directory} (Iteration {i+1}/9)")
+        subprocess.run("sh test.sh stop graalvm", shell=True, check=True)
+
+    # Step 4: Run the final test
+    # Run run.sh
+    logging.info(f"Running GraalVM native executable in {directory} (Iteration 10/10)")
+    subprocess.Popen(["sh", "run.sh", "graalvm"])
+
+    # Wait for 5 seconds
+    time.sleep(5)
+
+    # Run psrecord.sh
+    logging.info(f"Running ps record with GraalVM native executable in {directory}")
+    subprocess.Popen(["sh", "psrecord.sh", "graalvm"])
+
+    # Run test.sh
+    logging.info(f"Running tests with native executable in {directory}")
+    subprocess.run("sh test.sh graalvm", shell=True, check=True)
+
+    # Run perf.sh
+    logging.info(f"Running throughput/latency tests with native executable in {directory}")
+    subprocess.run("sh perf.sh graalvm", shell=True, check=True)
+
     logging.info(f"Exiting directory: {directory}")
 
 logging.info("Script execution complete")
