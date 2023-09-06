@@ -61,7 +61,7 @@ response_code=$(echo "$curl_response" | awk '{print $1}')
 response_time=$(echo "$curl_response" | awk '{print $2}')
 echo "POST Response Code 2: $response_code" >> test.txt
 echo "POST Response Time 2: $response_time" >> test.txt
-echo ""
+echo "" >> test.txt
 
 curl_response=$(curl -X POST -s -w "%{http_code} %{time_total}\n" -o /dev/null http://localhost:8101/conferences --header 'Content-Type: application/json' --data '{"name": "MS Build"}')
 response_code=$(echo "$curl_response" | awk '{print $1}')
