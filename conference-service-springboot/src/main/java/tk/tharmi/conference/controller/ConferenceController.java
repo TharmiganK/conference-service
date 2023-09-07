@@ -15,8 +15,12 @@ import java.util.List;
 @RequestMapping("/")
 public class ConferenceController {
 
+    private final ConferenceService conferenceService;
+
     @Autowired
-    ConferenceService conferenceService;
+    public ConferenceController(ConferenceService conferenceService) {
+        this.conferenceService = conferenceService;
+    }
 
     @GetMapping("/conferences")
     public List<Conference> getAllConferences() {
