@@ -1,6 +1,6 @@
 #!/bin/bash
 docker compose up -d
-sleep 10
+sleep 30
 
 echo "Running the application"
 
