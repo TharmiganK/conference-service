@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConferenceServiceSpringbootApplication {
+public class ConferenceServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConferenceServiceSpringbootApplication.class, args);
+		SpringApplication.run(ConferenceServiceApplication.class, args);
 	}
 
 }
