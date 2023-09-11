@@ -6,7 +6,7 @@ sleep 60
 
 wrk2 -t5 -c100 -d3m -R1000 --latency http://localhost:8102/conferences > latency.txt
 
-sleep 30
+sleep 45
 
 if [ "$1" = "graalvm" ]; then 
     mv throughput.txt throughput-graalvm.txt
