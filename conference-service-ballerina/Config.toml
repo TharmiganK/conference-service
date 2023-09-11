@@ -2,8 +2,10 @@
 conferenceServicePort = 8102
 countryServiceUrl = "http://localhost:9000"
 
-# The database configs
-[dbConfigs]
-dbName = "conferencedb"
-user = "admin"
-password = "admin"
+[conference_service_ballerina.db]
+host = "localhost"
+port = 3307
+user = "dbuser"
+password = "dbpwd123"
+database = "conferencedb"
+

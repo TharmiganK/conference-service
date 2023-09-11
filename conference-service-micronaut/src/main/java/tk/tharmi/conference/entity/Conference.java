@@ -1,28 +1,25 @@
 package tk.tharmi.conference.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name = "conference")
+@Table(name = "conferences")
 public class Conference {
     
-    private Long id;
+    private String id;
 
     @NotEmpty
     private String name;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

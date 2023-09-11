@@ -5,6 +5,6 @@ import io.micronaut.data.jpa.repository.JpaRepository;
 import tk.tharmi.conference.entity.Conference;
 
 @Repository
-public interface ConferenceRepository extends JpaRepository<Conference, Long> {
+public interface ConferenceRepository extends JpaRepository<Conference, String> {
     
 }

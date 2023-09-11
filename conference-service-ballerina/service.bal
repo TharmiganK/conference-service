@@ -1,28 +1,26 @@
+import conference_service_ballerina.db as db;
+
 import ballerina/http;
 import ballerina/mime;
+import ballerina/persist;
 
 configurable string countryServiceUrl = "http://localhost:9000";
-configurable H2dbConfigs dbConfigs = {
-    dbName: "conferencedb",
-    user: "admin",
-    password: "admin"
-};
+final http:Client countryServiceClient = check new (countryServiceUrl);
+
+final db:Client conferenceDBClient = check new;
 
 service class ConferenceService {
     *http:Service;
-    final ConferenceDBClient conferenceDBClient;
-
-    isolated function init() returns error? {
-        self.conferenceDBClient = check new (dbConfigs, countryServiceUrl);
-    }
 
     @http:ResourceConfig {
         produces: [mime:APPLICATION_JSON]
     }
-    isolated resource function get conferences() returns Conference[]|ConferenceServerError {
+    isolated resource function get conferences() returns db:Conference[]|ConferenceServerError {
 
         do {
-            return check self.conferenceDBClient->/conferences;
+            stream<db:Conference, persist:Error?> conferenceStream = conferenceDBClient->/conferences;
+            return check from db:Conference conference in conferenceStream
+                select conference;
         } on fail error err {
             return {
                 body: {
@@ -36,10 +34,11 @@ service class ConferenceService {
     @http:ResourceConfig {
         consumes: [mime:APPLICATION_JSON]
     }
-    isolated resource function post conferences(ConferenceRequest conference) returns ConferenceServerError? {
+    isolated resource function post conferences(db:ConferenceInsert conference) returns ConferenceServerError? {
 
         do {
-            return check self.conferenceDBClient->/conferences.post(conference);
+            _ = check conferenceDBClient->/conferences.post([conference]);
+            return;
         } on fail error err {
             return {
                 body: {
@@ -56,7 +55,11 @@ service class ConferenceService {
     isolated resource function get conferenceswithcountry() returns ExtendedConference[]|ConferenceServerError {
 
         do {
-            return check self.conferenceDBClient->/conferenceswithcountry;
+            stream<db:Conference, persist:Error?> conferenceStream = conferenceDBClient->/conferences;
+            return check from db:Conference conference in conferenceStream select {
+                name: conference.name,
+                country: check self.getCountry(conference.name)
+            };
         } on fail error err {
             return {
                 body: {
@@ -65,5 +68,10 @@ service class ConferenceService {
                 }
             };
         }
+    }
+
+    isolated function getCountry(string conference) returns string|error {
+        CountryResponse countryResp = check countryServiceClient->/conferences/[conference]/country;
+        return countryResp.name;
     }
 }

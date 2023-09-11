@@ -1,4 +1,8 @@
 #!/bin/bash
+docker compose up -d
+sleep 10
+
+echo "Running the application"
 
 if [ "$1" = "graalvm" ];
 then
@@ -10,3 +14,5 @@ else
     java -jar ./target/bin/conference_service_ballerina.jar >> run-jvm.txt 2>&1
     echo "" >> run-jvm.txt
 fi
+
+docker compose down

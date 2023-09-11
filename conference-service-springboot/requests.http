@@ -8,6 +8,7 @@ POST http://localhost:8103/conferences
 Content-Type: application/json
 
 {
+    "id": "CONF-2019-000",
     "name": "WSO2Con"
 }
 
