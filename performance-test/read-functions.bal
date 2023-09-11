@@ -81,3 +81,49 @@ function getMemoryUsage(string log) returns [decimal, decimal]|error {
     decimal cpu = check decimal:fromString(memoryGroups[1].substring());
     return [rss, cpu];
 }
+
+function getThroughput(string fileName) returns decimal|error {
+    string[] logs = check io:fileReadLines(fileName);
+    if logs.length() == 0 {
+        return error("No logs found");
+    }
+
+    foreach string log in logs {
+        regexp:Groups? throughputGroups = throughputRegex.findGroups(log);
+        if (throughputGroups is () || throughputGroups.length() < 1) {
+            continue;
+        }
+        if (throughputGroups.length() >= 2) {
+            regexp:Span? throughputGroup = throughputGroups[1];
+            if (throughputGroup is ()) {
+                return error("No throughput found");
+            }
+            string throughput = throughputGroup.substring();
+            return check decimal:fromString(throughput);
+        }
+    }
+    return error("No throughput found");
+}
+
+function getLatency(string fileName) returns string|error {
+    string[] logs = check io:fileReadLines(fileName);
+    if logs.length() == 0 {
+        return error("No logs found");
+    }
+
+    foreach string log in logs {
+        regexp:Groups? latencyGroups = latencyRegex.findGroups(log);
+        if (latencyGroups is () || latencyGroups.length() < 1) {
+            continue;
+        }
+        if (latencyGroups.length() >= 2) {
+            regexp:Span? latencyGroup = latencyGroups[1];
+            if (latencyGroup is ()) {
+                return error("No latency found");
+            }
+            string latency = latencyGroup.substring();
+            return latency;
+        }
+    }
+    return error("No latency found");
+}

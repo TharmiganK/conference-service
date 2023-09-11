@@ -12,12 +12,14 @@ function getTime(string log) returns time:Utc|error {
     return check time:utcFromCivil(civilFromString);
 }
 
-function printPerfMatrix(string name, int[] startupTimes, [decimal, decimal][] memoryUsages) returns error? {
+function printPerfMatrix(string name, int[] startupTimes, [decimal, decimal][] memoryUsages, decimal throughput, string latency) returns error? {
     PerformanceMatrix[] ballerinaPerfMatrix = from int i in 0 ... startupTimes.length() - 1
         select {
             startupTime: startupTimes[i],
             rss: memoryUsages[i][1],
-            cpu: memoryUsages[i][0]
+            cpu: memoryUsages[i][0],
+            throughput: throughput,
+            latency: latency
         };
     int averageStartupTime = from var {startupTime} in ballerinaPerfMatrix
         collect sum(startupTime) / ballerinaPerfMatrix.length();
@@ -31,5 +33,7 @@ function printPerfMatrix(string name, int[] startupTimes, [decimal, decimal][] m
     io:println("Average startup time: " + averageStartupTime.toString() + "ms");
     io:println("Max RSS: " + maxRss.toString() + "MB");
     io:println("Max CPU Percentage: " + maxCpuUsuage.toString() + "%");
+    io:println("Throughput: " + throughput.toString() + " requests/sec");
+    io:println("Latency: " + latency);
     io:println("----------------------------------------\n");
 }
