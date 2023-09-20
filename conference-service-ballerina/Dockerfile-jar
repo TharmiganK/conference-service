@@ -15,4 +15,4 @@ COPY target/bin/conference_service_ballerina.jar .
 
 USER ballerina
 
-CMD echo "time = $(date +"%Y-%m-%dT%H:%M:%S.%3NZ") level = INFO module = tharmigan/conference_service_ballerina message = Executing the Ballerina application" && java -jar conference_service_ballerina.jar
+CMD echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3NZ") level=INFO module=tharmigan/conference_service_ballerina message=Executing the Ballerina application" && java -jar conference_service_ballerina.jar
