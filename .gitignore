@@ -3,7 +3,7 @@
 target/
 Dependencies.toml
 .devcontainer.json
-# generated
+generated
 
 # MacOS
 .DS_Store
