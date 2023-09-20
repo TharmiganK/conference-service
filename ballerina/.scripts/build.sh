@@ -5,11 +5,11 @@ echo ""
 
 if [ "$1" = "graalvm" ];
 then
-    bal clean
-    bal build --graalvm > build-graalvm.txt 2>&1
+    bal clean --target-dir ../target
+    bal build --graalvm ../../ballerina > ../.results/build-graalvm.txt 2>&1
 else
-    bal clean
-    bal build
+    bal clean --target-dir ../target
+    bal build ../../ballerina
 fi
 
 echo ""

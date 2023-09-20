@@ -5,11 +5,11 @@ echo ""
 
 if [ "$1" = "graalvm" ];
 then
-    bal clean
-    bal build --graalvm --cloud=docker
+    bal clean --target-dir ../target
+    bal build --graalvm --cloud=docker ../../ballerina
 else
-    bal clean
-    bal build --cloud=docker
+    bal clean --target-dir ../target
+    bal build --cloud=docker ../../ballerina
 fi
 
 echo ""

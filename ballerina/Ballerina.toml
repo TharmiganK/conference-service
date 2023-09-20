@@ -15,4 +15,3 @@ graalvmCompatible = true
 groupId = "io.ballerina.stdlib"
 artifactId = "persist.sql-native"
 version = "1.2.0"
-path = "./lib/persist.sql-native-1.2.0.jar"
