@@ -4,7 +4,7 @@ A RESTful conference service example. The following diagram shows the outline of
 
 ![Conference Service](.resources/conference-service.png)
 
-The application has a `Conference Service`` that exposes the following resources:
+The application has a `Conference Service` that exposes the following resources:
 
 - `GET /conferences` : returns an array of conferences with the name and the id
 - `POST /conferences` : creates a conference resource with a name
