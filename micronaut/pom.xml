@@ -107,7 +107,6 @@
         <groupId>io.micronaut.build</groupId>
         <artifactId>micronaut-maven-plugin</artifactId>
         <configuration>
-          <baseImageRun>ubuntu:latest</baseImageRun>
           <configFile>aot-${packaging}.properties</configFile>
         </configuration>
       </plugin>
