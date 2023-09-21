@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ../
 ./mvnw clean
 
 if [ "$1" = "graalvm" ];
@@ -18,3 +19,5 @@ else
         ./mvnw package -Dpackaging=docker
     fi
 fi
+
+cd .scripts

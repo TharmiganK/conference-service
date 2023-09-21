@@ -1,0 +1,45 @@
+### Request 1
+
+GET http://localhost:8101/conferences
+
+### Request 2
+
+POST http://localhost:8101/conferences
+Content-Type: application/json
+
+{
+    "id": "CONF-2019-001",
+    "name": "WSO2Con"
+}
+
+### Request 3
+
+GET http://localhost:8101/conferenceswithcountry
+
+### Request 4
+
+POST http://localhost:8101/conferences
+Content-Type: application/json
+
+{
+    "id": "CONF-2021-002",
+    "name": "Strata"
+}
+
+### Request 5
+
+POST http://localhost:8101/conferences
+Content-Type: application/json
+
+{
+    "id": "CONF-2023-003",
+    "name": "KubeCon"
+}
+
+### Request 6
+
+GET http://localhost:8101/conferences
+
+### Request 7
+
+GET http://localhost:8101/conferenceswithcountry
