@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ../
 ./mvnw clean
 
 if [ "$1" = "graalvm" ];
@@ -8,3 +9,5 @@ then
 else
     ./mvnw install -Dquarkus.container-image.build=true
 fi
+
+cd .scripts
