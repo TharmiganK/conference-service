@@ -20,7 +20,7 @@ This directory contains the Micronaut version of the Conference Service.
   $ docker compose up -d
 
   [+] Running 3/3
-   ✔ Network ballerina_default  Created                   0.0s 
+   ✔ Network micronaut_default  Created                   0.0s 
    ✔ Container conferencedb     Started                   0.6s 
    ✔ Container country-service  Started                   0.4s 
   ```
