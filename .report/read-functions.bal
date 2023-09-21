@@ -81,92 +81,21 @@ function getInfo(string infoName, string fileName, regexp:RegExp filter) returns
     }
 
     foreach string log in logs {
-        if log.includes(infoName) {
-            regexp:Groups? infoGroups = filter.findGroups(log);
-            if (infoGroups is () || infoGroups.length() < 1) {
+        regexp:Groups? infoGroups = filter.findGroups(log);
+        if (infoGroups is () || infoGroups.length() < 1) {
+            continue;
+        }
+        if (infoGroups.length() >= 2) {
+            regexp:Span? infoGroup = infoGroups[1];
+            if (infoGroup is ()) {
                 return error("No " + infoName + " found");
             }
-            if (infoGroups.length() >= 2) {
-                regexp:Span? infoGroup = infoGroups[1];
-                if (infoGroup is ()) {
-                    return error("No " + infoName + " found");
-                }
-                string info = infoGroup.substring();
-                if (infoName == "throughput") {
-                    return info + " requests/sec";
-                }
-                return info;
+            string info = infoGroup.substring();
+            if (infoName == "throughput") {
+                return info + " requests/sec";
             }
+            return info;
         }
     }
     return error("No " + infoName + " found");
 }
-
-// function getThroughput(string fileName) returns string|error {
-//     string[] logs = check io:fileReadLines(fileName);
-//     if logs.length() == 0 {
-//         return error("No logs found");
-//     }
-
-//     foreach string log in logs {
-//         regexp:Groups? throughputGroups = throughputRegex.findGroups(log);
-//         if (throughputGroups is () || throughputGroups.length() < 1) {
-//             continue;
-//         }
-//         if (throughputGroups.length() >= 2) {
-//             regexp:Span? throughputGroup = throughputGroups[1];
-//             if (throughputGroup is ()) {
-//                 return error("No throughput found");
-//             }
-//             string throughput = throughputGroup.substring();
-//             return throughput + " requests/sec";
-//         }
-//     }
-//     return error("No throughput found");
-// }
-
-// function getLatency(string fileName) returns string|error {
-//     string[] logs = check io:fileReadLines(fileName);
-//     if logs.length() == 0 {
-//         return error("No logs found");
-//     }
-
-//     foreach string log in logs {
-//         regexp:Groups? latencyGroups = latencyRegex.findGroups(log);
-//         if (latencyGroups is () || latencyGroups.length() < 1) {
-//             continue;
-//         }
-//         if (latencyGroups.length() >= 2) {
-//             regexp:Span? latencyGroup = latencyGroups[1];
-//             if (latencyGroup is ()) {
-//                 return error("No latency found");
-//             }
-//             string latency = latencyGroup.substring();
-//             return latency;
-//         }
-//     }
-//     return error("No latency found");
-// }
-
-// function getBuildTime(string fileName) returns error? {
-//     string[] logs = check io:fileReadLines(fileName);
-//     if logs.length() == 0 {
-//         return error("No logs found");
-//     }
-
-//     foreach string log in logs {
-//         regexp:Groups? buildTimeGroups = buildTimeRegex.findGroups(log);
-//         if (buildTimeGroups is () || buildTimeGroups.length() < 1) {
-//             continue;
-//         }
-//         if (buildTimeGroups.length() >= 2) {
-//             regexp:Span? buildTimeGroup = buildTimeGroups[1];
-//             if (buildTimeGroup is ()) {
-//                 return error("No latency found");
-//             }
-//             string buildTime = buildTimeGroup.substring();
-//             return buildTime;
-//         }
-//     }
-//     return error("No latency found");
-// }
