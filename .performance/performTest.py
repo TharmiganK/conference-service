@@ -10,10 +10,10 @@ logging.basicConfig(
 
 # List of directories
 directories = [
-    "conference-service-ballerina",
-    "conference-service-quarkus",
-    "conference-service-micronaut",
-    "conference-service-springboot",
+    "ballerina",
+    "micronaut",
+    "quarkus",
+    "spring-boot"
 ]
 
 # Loop through each directory
@@ -22,7 +22,7 @@ for directory in directories:
 
     # Step 1: Go inside the directory
     os.chdir("..")
-    os.chdir(directory)
+    os.chdir(directory + "/.scripts")
 
     # Step 2: Run clean.sh
     logging.info(f"Running 'sh clean.sh' in {directory}")
@@ -33,7 +33,7 @@ for directory in directories:
     subprocess.run("sh build.sh", shell=True, check=True)
 
     # Step 3: Run the test loop
-    for i in range(9):
+    for i in range(10):
         # Run run.sh
         logging.info(f"Running JAR in {directory} (Iteration {i+1}/9)")
         subprocess.Popen(["sh", "run.sh"])
@@ -75,7 +75,7 @@ for directory in directories:
     subprocess.run("sh build.sh graalvm", shell=True, check=True)
 
     # Step 3: Run the test loop
-    for i in range(9):
+    for i in range(10):
         # Run run.sh
         logging.info(f"Running GraalVM native executable in {directory} (Iteration {i+1}/9)")
         subprocess.Popen(["sh", "run.sh", "graalvm"])
@@ -114,5 +114,6 @@ for directory in directories:
     time.sleep(20)
 
     logging.info(f"Exiting directory: {directory}")
+    os.chdir("..")
 
 logging.info("Script execution complete")
