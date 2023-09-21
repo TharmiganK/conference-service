@@ -66,8 +66,7 @@ nb-configuration.xml
 /.quarkus/cli/plugins/
 
 #Report
-comparison-report/*
-reports/*
-perf/*
-*.png
-*.txt
+*/.results/*.png
+**/.results/*.txt
+**/.comparison/*.txt
+**/.comparison/*.png
