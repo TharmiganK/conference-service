@@ -29,7 +29,6 @@ public class ConferenceServiceImpl implements ConferenceService {
 
     public void create(Conference conference) {
         conferenceRepository.save(conference);
-
     }
 
     public List<ExtendedConference> getAllWithCountry() {
