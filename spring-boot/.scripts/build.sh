@@ -8,7 +8,7 @@ if [ "$1" = "graalvm" ];
 then
     ./mvnw -Pnative native:compile > ./.results/build-graalvm.txt 2>&1
 else
-    ./mvnw package
+    ./mvnw package > ./.results/build-jvm.txt 2>&1
 fi
 
 cd .scripts
