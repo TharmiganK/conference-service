@@ -14,9 +14,9 @@ then
 else
     if [ "$1" = "optimized" ];
     then
-        ./mvnw package -Dmicronaut.aot.enabled=true -Dmicronaut.aot.packageName=conference_service_micronaut
+        ./mvnw package -Dmicronaut.aot.enabled=true -Dmicronaut.aot.packageName=conference_service_micronaut > ./.results/build-jvm.txt 2>&1
     else
-        ./mvnw package
+        ./mvnw package > ./.results/build-jvm.txt 2>&1
     fi
 fi
 

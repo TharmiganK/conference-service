@@ -25,6 +25,7 @@ public class ConferenceServiceImpl implements ConferenceService {
     public ConferenceServiceImpl(ConferenceRepository conferenceRepository, CountryClient countryClient) {
         this.conferenceRepository = conferenceRepository;
         this.countryClient = countryClient;
+        this.conferenceRepository.deleteAll();
     }
 
     @Override
