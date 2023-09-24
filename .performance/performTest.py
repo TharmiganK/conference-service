@@ -32,29 +32,37 @@ for directory in directories:
     logging.info(f"Running JVM build in {directory}")
     subprocess.run("sh build.sh", shell=True, check=True)
 
+    # Run Docker compose up
+    logging.info(f"Running Docker compose up in {directory}")
+    subprocess.run("docker-compose up -d", shell=True, check=True)
+
+    # Wait for 30 seconds
+    time.sleep(30)
+
     # Step 3: Run the test loop
-    for i in range(10):
+    for i in range(9):
         # Run run.sh
-        logging.info(f"Running JAR in {directory} (Iteration {i+1}/9)")
+        logging.info(f"Running JAR in {directory} (Iteration {i+1}/10)")
         subprocess.Popen(["sh", "run.sh"])
 
-        # Wait for 60 seconds
-        time.sleep(60)
+        # Wait for 10 seconds
+        time.sleep(10)
 
         # Run test.sh stop
-        logging.info(f"Running tests on JAR in {directory} (Iteration {i+1}/9)")
+        logging.info(f"Running tests on JAR in {directory} (Iteration {i+1}/10)")
         subprocess.run("sh test.sh stop", shell=True, check=True)
 
         # Wait for 20 seconds
         time.sleep(20)
 
     # Step 4: Run the final test
+
     # Run run.sh
     logging.info(f"Running JAR in {directory} (Iteration 10/10)")
     subprocess.Popen(["sh", "run.sh"])
 
-    # Wait for 60 seconds
-    time.sleep(60)
+    # Wait for 10 seconds
+    time.sleep(10)
 
     # Run psrecord.sh
     logging.info(f"Running ps record for JAR in {directory}")
@@ -68,35 +76,34 @@ for directory in directories:
     logging.info(f"Running throughput/latency tests with JAR in {directory}")
     subprocess.run("sh perf.sh", shell=True, check=True)
 
-    logging.info(f"Exiting directory: {directory}")
-
     # Step 3: Run build.sh
     logging.info(f"Running GraalVM build in {directory}")
     subprocess.run("sh build.sh graalvm", shell=True, check=True)
 
     # Step 3: Run the test loop
-    for i in range(10):
+    for i in range(9):
         # Run run.sh
-        logging.info(f"Running GraalVM native executable in {directory} (Iteration {i+1}/9)")
+        logging.info(f"Running GraalVM native executable in {directory} (Iteration {i+1}/10)")
         subprocess.Popen(["sh", "run.sh", "graalvm"])
 
-        # Wait for 60 seconds
-        time.sleep(60)
+        # Wait for 10 seconds
+        time.sleep(10)
 
         # Run test.sh stop
-        logging.info(f"Running tests with native executable in {directory} (Iteration {i+1}/9)")
+        logging.info(f"Running tests with native executable in {directory} (Iteration {i+1}/10)")
         subprocess.run("sh test.sh stop graalvm", shell=True, check=True)
 
         # Wait for 20 seconds
         time.sleep(20)
 
     # Step 4: Run the final test
+
     # Run run.sh
     logging.info(f"Running GraalVM native executable in {directory} (Iteration 10/10)")
     subprocess.Popen(["sh", "run.sh", "graalvm"])
 
-    # Wait for 60 seconds
-    time.sleep(60)
+    # Wait for 10 seconds
+    time.sleep(10)
 
     # Run psrecord.sh
     logging.info(f"Running ps record with GraalVM native executable in {directory}")
@@ -109,6 +116,10 @@ for directory in directories:
     # Run perf.sh
     logging.info(f"Running throughput/latency tests with native executable in {directory}")
     subprocess.run("sh perf.sh graalvm", shell=True, check=True)
+
+    # Run Docker compose down
+    logging.info(f"Running Docker compose down in {directory}")
+    subprocess.run("docker-compose down", shell=True, check=True)
 
     # Wait for 20 seconds
     time.sleep(20)
