@@ -8,7 +8,7 @@ public function main() returns error? {
     http:Listener conferenceListener = check new (conferenceServicePort, timeout = 0);
     log:printInfo("Starting the listener...");
     // Attach the service to the listener.
-    check conferenceListener.attach(new ConferenceService());
+    check conferenceListener.attach(check new ConferenceService());
     // Start the listener.
     check conferenceListener.'start();
     // Register the listener dynamically.

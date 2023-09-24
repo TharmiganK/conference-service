@@ -12,6 +12,10 @@ final db:Client conferenceDBClient = check new;
 service class ConferenceService {
     *http:Service;
 
+    function init() returns error? {
+        _ = check conferenceDBClient->executeNativeSQL(`DELETE FROM Conference`);
+    }
+
     @http:ResourceConfig {
         produces: [mime:APPLICATION_JSON]
     }

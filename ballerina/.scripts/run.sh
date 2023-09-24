@@ -1,8 +1,4 @@
 #!/bin/bash
-docker compose up -d
-sleep 45
-
-echo "Running the application"
 
 cp ../Config.toml ./Config.toml
 
@@ -18,5 +14,3 @@ else
 fi
 
 rm -rf Config.toml
-
-docker compose down

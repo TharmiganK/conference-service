@@ -9,7 +9,7 @@ then
     bal build --graalvm ../../ballerina > ../.results/build-graalvm.txt 2>&1
 else
     bal clean --target-dir ../target
-    bal build ../../ballerina
+    bal build ../../ballerina > ../.results/build-jvm.txt 2>&1
 fi
 
 echo ""

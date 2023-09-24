@@ -15,10 +15,10 @@ This directory contains the Ballerina version of the Conference Service.
 - Install [VSCode](https://code.visualstudio.com/) with the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 - Install and Configure GraalVM. See the [Configure GraalVM](https://ballerina.io/learn/build-the-executable-locally/#configure-graalvm) section for more details.
 - Install [Docker](https://docs.docker.com/get-docker/).
-- Run the docker compose file to start the `country-service` and the mysql database.
+- Run the docker-compose file to start the `country-service` and the mysql database.
 
   ```console
-  $ docker compose up -d
+  $ docker-compose up -d
 
   [+] Running 3/3
    ✔ Network ballerina_default  Created                   0.0s 
