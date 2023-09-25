@@ -1,0 +1,50 @@
+time=2023-09-24T22:00:37.909+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:00:38.619+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:00:38.691+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:01:19.678+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:01:20.329+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:01:20.406+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:02:00.813+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:02:01.458+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:02:01.537+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:02:41.841+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:02:42.493+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:02:42.567+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:03:22.806+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:03:23.458+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:03:23.540+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:04:03.800+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:04:04.454+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:04:04.540+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:04:44.771+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:04:45.426+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:04:45.512+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:05:25.707+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:05:26.359+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:05:26.439+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:06:06.677+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:06:07.328+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:06:07.415+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+
+time=2023-09-24T22:06:47.643+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
+time=2023-09-24T22:06:48.300+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
+time=2023-09-24T22:06:48.380+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Startup completed. Listening on: http://localhost:8102"
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed
+error: Connection between remote client and host is closed

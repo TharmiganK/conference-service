@@ -1,0 +1,153 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< tk.tharmi:conference_service_micronaut >---------------
+[INFO] Building conference_service_micronaut 1.0
+[INFO]   from pom.xml
+[INFO] ----------------------------[ native-image ]----------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ conference_service_micronaut ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ conference_service_micronaut ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes
+[INFO] 
+[INFO] --- mn:3.5.4:aot-analysis (default-aot-analysis) @ conference_service_micronaut ---
+[WARNING] Packaging is set to [native-image], but Micronaut AOT runtime is set to [jit]. Setting AOT runtime to: [native]
+[INFO] Running Micronaut AOT 1.1.2 aot-analysis
+[INFO] Packaging project
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes
+[INFO] Executing Micronaut AOT analysis
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] Using AOT configuration file: /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/aot-native-image.properties
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+20:18:25.368 [main] INFO 
+                i.m.aot.MicronautAotOptimizer - Analysis will be performed with active environments: []
+[INFO] 
+[INFO] --- mn:3.5.4:graalvm-resources (default-graalvm-resources) @ conference_service_micronaut ---
+[INFO] Generating /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes/META-INF/native-image/tk.tharmi/conference_service_micronaut/resource-config.json
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ conference_service_micronaut ---
+[INFO] Building jar: /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut-1.0.jar
+[INFO] 
+[INFO] >>> native:0.9.19:compile (default-compile) > package @ conference_service_micronaut >>>
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ conference_service_micronaut ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ conference_service_micronaut ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes
+[INFO] 
+[INFO] --- mn:3.5.4:aot-analysis (default-aot-analysis) @ conference_service_micronaut ---
+[WARNING] Packaging is set to [native-image], but Micronaut AOT runtime is set to [jit]. Setting AOT runtime to: [native]
+[INFO] Running Micronaut AOT 1.1.2 aot-analysis
+[INFO] Packaging project
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes
+[INFO] Executing Micronaut AOT analysis
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] Using AOT configuration file: /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/aot-native-image.properties
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+20:18:30.068 [main] INFO 
+                i.m.aot.MicronautAotOptimizer - Analysis will be performed with active environments: []
+[INFO] 
+[INFO] --- mn:3.5.4:graalvm-resources (default-graalvm-resources) @ conference_service_micronaut ---
+[INFO] Generating /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes/META-INF/native-image/tk.tharmi/conference_service_micronaut/resource-config.json
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ conference_service_micronaut ---
+[INFO] Building jar: /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut-1.0.jar
+[INFO] 
+[INFO] <<< native:0.9.19:compile (default-compile) < package @ conference_service_micronaut <<<
+[INFO] 
+[INFO] 
+[INFO] --- native:0.9.19:compile (default-compile) @ conference_service_micronaut ---
+[INFO] Found GraalVM installation from GRAALVM_HOME variable.
+[WARNING] Properties file at 'jar:file:///Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut-1.0.jar!/META-INF/native-image/tk.tharmi.aot.generated/native-image.properties' does not match the recommended 'META-INF/native-image/tk.tharmi/conference_service_micronaut/native-image.properties' layout.
+[WARNING] Properties file at 'jar:file:///Users/wso2/.m2/repository/io/micronaut/micronaut-http/3.10.1/micronaut-http-3.10.1.jar!/META-INF/native-image/io.micronaut.http/micronaut-http/native-image.properties' does not match the recommended 'META-INF/native-image/io.micronaut/micronaut-http/native-image.properties' layout.
+[WARNING] Properties file at 'jar:file:///Users/wso2/.m2/repository/io/micronaut/sql/micronaut-hibernate-jpa/4.8.1/micronaut-hibernate-jpa-4.8.1.jar!/META-INF/native-image/io.micronaut.sql/hibernate-jpa-graal/native-image.properties' does not match the recommended 'META-INF/native-image/io.micronaut.sql/micronaut-hibernate-jpa/native-image.properties' layout.
+[WARNING] Properties file at 'jar:file:///Users/wso2/.m2/repository/io/micronaut/micronaut-validation/3.10.1/micronaut-validation-3.10.1.jar!/META-INF/native-image/io.micronaut.validation/micronaut-validation/native-image.properties' does not match the recommended 'META-INF/native-image/io.micronaut/micronaut-validation/native-image.properties' layout.
+[WARNING] Properties file at 'jar:file:///Users/wso2/.m2/repository/io/micronaut/micronaut-management/3.10.1/micronaut-management-3.10.1.jar!/META-INF/native-image/io.micronaut.management/micronaut-management/native-image.properties' does not match the recommended 'META-INF/native-image/io.micronaut/micronaut-management/native-image.properties' layout.
+[WARNING] Properties file at 'jar:file:///Users/wso2/.m2/repository/io/micronaut/data/micronaut-data-tx/3.10.0/micronaut-data-tx-3.10.0.jar!/META-INF/native-image/io.micronaut.data/data-tx/native-image.properties' does not match the recommended 'META-INF/native-image/io.micronaut.data/micronaut-data-tx/native-image.properties' layout.
+[INFO] Executing: /Users/wso2/.sdkman/candidates/java/current/bin/native-image -cp /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut-1.0.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-buffer-netty/3.10.1/micronaut-buffer-netty-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-http/3.10.1/micronaut-http-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-http-server-netty/3.10.1/micronaut-http-server-netty-3.10.1.jar:/Users/wso2/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/Users/wso2/.m2/repository/io/netty/netty-codec-socks/4.1.94.Final/netty-codec-socks-4.1.94.Final.jar:/Users/wso2/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/wso2/.m2/repository/io/micronaut/sql/micronaut-hibernate-jpa/4.8.1/micronaut-hibernate-jpa-4.8.1.jar:/Users/wso2/.m2/repository/io/netty/netty-transport/4.1.94.Final/netty-transport-4.1.94.Final.jar:/Users/wso2/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.0/jackson-annotations-2.15.0.jar:/Users/wso2/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/wso2/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-inject/3.10.1/micronaut-inject-3.10.1.jar:/Users/wso2/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-http-client/3.10.1/micronaut-http-client-3.10.1.jar:/Users/wso2/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/Users/wso2/.m2/repository/net/bytebuddy/byte-buddy/1.12.18/byte-buddy-1.12.18.jar:/Users/wso2/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/Users/wso2/.m2/repository/io/netty/netty-codec/4.1.94.Final/netty-codec-4.1.94.Final.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-core-reactive/3.10.1/micronaut-core-reactive-3.10.1.jar:/Users/wso2/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-json-core/3.10.1/micronaut-json-core-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-runtime/3.10.1/micronaut-runtime-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-websocket/3.10.1/micronaut-websocket-3.10.1.jar:/Users/wso2/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.0/jackson-datatype-jsr310-2.15.0.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-jackson-databind/3.10.1/micronaut-jackson-databind-3.10.1.jar:/Users/wso2/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/wso2/.m2/repository/ch/qos/logback/logback-core/1.2.11/logback-core-1.2.11.jar:/Users/wso2/.m2/repository/org/hibernate/hibernate-core/5.6.15.Final/hibernate-core-5.6.15.Final.jar:/Users/wso2/.m2/repository/io/netty/netty-codec-http2/4.1.94.Final/netty-codec-http2-4.1.94.Final.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-http-server/3.10.1/micronaut-http-server-3.10.1.jar:/Users/wso2/.m2/repository/javax/transaction/javax.transaction-api/1.3/javax.transaction-api-1.3.jar:/Users/wso2/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/wso2/.m2/repository/io/netty/netty-handler/4.1.94.Final/netty-handler-4.1.94.Final.jar:/Users/wso2/.m2/repository/com/mysql/mysql-connector-j/8.0.32/mysql-connector-j-8.0.32.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-validation/3.10.1/micronaut-validation-3.10.1.jar:/Users/wso2/.m2/repository/ch/qos/logback/logback-classic/1.2.11/logback-classic-1.2.11.jar:/Users/wso2/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-management/3.10.1/micronaut-management-3.10.1.jar:/Users/wso2/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.0/jackson-databind-2.15.0.jar:/Users/wso2/.m2/repository/io/micronaut/data/micronaut-data-tx/3.10.0/micronaut-data-tx-3.10.0.jar:/Users/wso2/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-context/3.10.1/micronaut-context-3.10.1.jar:/Users/wso2/.m2/repository/io/netty/netty-buffer/4.1.94.Final/netty-buffer-4.1.94.Final.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-http-netty/3.10.1/micronaut-http-netty-3.10.1.jar:/Users/wso2/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/wso2/.m2/repository/io/micronaut/sql/micronaut-jdbc/4.8.1/micronaut-jdbc-4.8.1.jar:/Users/wso2/.m2/repository/io/netty/netty-common/4.1.94.Final/netty-common-4.1.94.Final.jar:/Users/wso2/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/Users/wso2/.m2/repository/io/netty/netty-codec-http/4.1.94.Final/netty-codec-http-4.1.94.Final.jar:/Users/wso2/.m2/repository/com/google/protobuf/protobuf-java/3.21.12/protobuf-java-3.21.12.jar:/Users/wso2/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/wso2/.m2/repository/io/micronaut/data/micronaut-data-tx-hibernate/3.10.0/micronaut-data-tx-hibernate-3.10.0.jar:/Users/wso2/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/wso2/.m2/repository/io/micronaut/sql/micronaut-jdbc-hikari/4.8.1/micronaut-jdbc-hikari-4.8.1.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-router/3.10.1/micronaut-router-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-http-client-core/3.10.1/micronaut-http-client-core-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/data/micronaut-data-model/3.10.0/micronaut-data-model-3.10.0.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-aop/3.10.1/micronaut-aop-3.10.1.jar:/Users/wso2/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/wso2/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/Users/wso2/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.0/jackson-core-2.15.0.jar:/Users/wso2/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/Users/wso2/.m2/repository/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar:/Users/wso2/.m2/repository/io/projectreactor/reactor-core/3.5.0/reactor-core-3.5.0.jar:/Users/wso2/.m2/repository/io/netty/netty-resolver/4.1.94.Final/netty-resolver-4.1.94.Final.jar:/Users/wso2/.m2/repository/io/netty/netty-handler-proxy/4.1.94.Final/netty-handler-proxy-4.1.94.Final.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-core/3.10.1/micronaut-core-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/micronaut-jackson-core/3.10.1/micronaut-jackson-core-3.10.1.jar:/Users/wso2/.m2/repository/io/micronaut/data/micronaut-data-runtime/3.10.0/micronaut-data-runtime-3.10.0.jar:/Users/wso2/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.94.Final/netty-transport-native-unix-common-4.1.94.Final.jar:/Users/wso2/.m2/repository/io/micronaut/data/micronaut-data-hibernate-jpa/3.10.0/micronaut-data-hibernate-jpa-3.10.0.jar:/Users/wso2/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/wso2/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/wso2/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.0/jackson-datatype-jdk8-2.15.0.jar --no-fallback -H:Path=/Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target -H:Name=conference_service_micronaut -H:Class=tk.tharmi.conference.Application --no-fallback
+Warning: The USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM environment variable is deprecated and might be removed in a future release. Please refer to the GraalVM release notes.
+========================================================================================================================
+GraalVM Native Image: Generating 'conference_service_micronaut' (executable)...
+========================================================================================================================
+For detailed information and explanations on the build output, visit:
+https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+------------------------------------------------------------------------------------------------------------------------
+Warning: Feature class io.micronaut.jdbc.nativeimage.JdbcFeature is annotated with the deprecated annotation @AutomaticFeature. Support for this annotation will be removed in a future version of GraalVM. Applications should register a feature using the option --features=io.micronaut.jdbc.nativeimage.JdbcFeature
+Warning: Feature class io.micronaut.configuration.hibernate.jpa.graal.HibernateFeature is annotated with the deprecated annotation @AutomaticFeature. Support for this annotation will be removed in a future version of GraalVM. Applications should register a feature using the option --features=io.micronaut.configuration.hibernate.jpa.graal.HibernateFeature
+[1/8] Initializing...                                                                                    (7.1s @ 0.18GB)
+ Java version: 17.0.8+7, vendor version: GraalVM CE 17.0.8+7.1
+ Graal compiler: optimization level: 2, target machine: armv8-a
+ C compiler: cc (apple, arm64, 14.0.3)
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+ 6 user-specific feature(s)
+ - io.micronaut.buffer.netty.NettyFeature
+ - io.micronaut.configuration.hibernate.jpa.graal.HibernateFeature
+ - io.micronaut.core.graal.ServiceLoaderFeature
+ - io.micronaut.http.netty.graal.HttpNettyFeature
+ - io.micronaut.jackson.JacksonDatabindFeature
+ - io.micronaut.jdbc.nativeimage.JdbcFeature
+[2/8] Performing analysis...  [*******]                                                                 (41.3s @ 1.89GB)
+  23,619 (92.01%) of 25,670 types reachable
+  34,404 (61.08%) of 56,325 fields reachable
+ 114,559 (60.77%) of 188,524 methods reachable
+   7,888 types,   745 fields, and 6,799 methods registered for reflection
+      65 types,    75 fields, and    55 methods registered for JNI access
+       5 native libraries: -framework CoreServices, -framework Foundation, dl, pthread, z
+[3/8] Building universe...                                                                               (7.2s @ 2.48GB)
+[4/8] Parsing methods...      [**]                                                                       (3.2s @ 2.38GB)
+[5/8] Inlining methods...     [***]                                                                      (1.8s @ 2.80GB)
+[6/8] Compiling methods...    [*****]                                                                   (28.4s @ 2.24GB)
+[7/8] Layouting methods...    [**]                                                                       (4.4s @ 2.47GB)
+[8/8] Creating image...       [***]                                                                      (8.4s @ 2.11GB)
+  47.87MB (49.90%) for code area:    75,594 compilation units
+  46.89MB (48.89%) for image heap:  508,307 objects and 740 resources
+   1.16MB ( 1.21%) for other data
+  95.92MB in total
+------------------------------------------------------------------------------------------------------------------------
+Top 10 origins of code area:                                Top 10 object types in image heap:
+  12.61MB java.base                                           11.18MB byte[] for code metadata
+   7.64MB hibernate-core-5.6.15.Final.jar                      6.71MB java.lang.Class
+   3.26MB java.xml                                             4.56MB java.lang.String
+   2.82MB mysql-connector-j-8.0.32.jar                         4.50MB byte[] for java.lang.String
+   1.80MB jackson-databind-2.15.0.jar                          3.57MB byte[] for general heap data
+   1.62MB svm.jar                                              1.98MB com.oracle.svm.core.hub.DynamicHubCompanion
+   1.10MB jdk.proxy4                                           1.37MB byte[] for embedded resources
+ 990.00kB reactor-core-3.5.0.jar                               1.35MB byte[] for reflection metadata
+ 984.88kB conference_service_micronaut-1.0.jar                 1.04MB java.lang.String[]
+ 821.42kB micronaut-inject-3.10.1.jar                        838.98kB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+  13.84MB for 83 more packages                                 8.71MB for 4939 more object types
+------------------------------------------------------------------------------------------------------------------------
+Recommendations:
+ HEAP: Set max heap for improved and more predictable memory usage.
+ CPU:  Enable more CPU features with '-march=native' for improved performance.
+------------------------------------------------------------------------------------------------------------------------
+                       13.3s (12.9% of total time) in 123 GCs | Peak RSS: 4.61GB | CPU load: 5.57
+------------------------------------------------------------------------------------------------------------------------
+Produced artifacts:
+ /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut (executable)
+========================================================================================================================
+Finished generating 'conference_service_micronaut' in 1m 42s.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:54 min
+[INFO] Finished at: 2023-09-24T20:20:14+05:30
+[INFO] ------------------------------------------------------------------------
