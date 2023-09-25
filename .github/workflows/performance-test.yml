@@ -23,6 +23,21 @@ jobs:
         with:
           version: 2201.8.0
 
+      - name: Setup `wrk`
+        run: |
+          git clone https://github.com/wg/wrk.git wrk
+          cd wrk
+          make
+          sudo cp wrk /usr/local/bin
+
+      - name: Setup `wrk2`
+        run: |
+          git clone https://github.com/giltene/wrk2.git wrk2
+          cd wrk2
+          make
+          mv wrk wrk2
+          sudo cp wrk2 /usr/local/bin
+
       - name: Replace `gdate` usage with `date`
         run: |
           sed -i 's/gdate/date/g' run.sh
