@@ -1,8 +1,0 @@
-Running 3m test @ http://localhost:8100/conferences
-  5 threads and 100 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    44.90ms   42.82ms   1.00s    95.66%
-    Req/Sec   470.21     80.20   787.00     70.76%
-  420480 requests in 3.00m, 128.72MB read
-Requests/sec:   2334.89
-Transfer/sec:    731.93KB
