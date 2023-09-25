@@ -18,6 +18,11 @@ jobs:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             set-java-home: 'true'
 
+      - name: Setup Python packages
+        run: |
+          pip3 install matplotlib
+          pip3 install psrecord
+
       - name: Setup Ballerina
         uses: ballerina-platform/setup-ballerina@v1
         with:
