@@ -32,7 +32,7 @@ jobs:
           sleep 30
 
       - name: Run and Test
-        run: bal run target/bin/conference_service_ballerina.jar  & sh .scripts/test.sh stop
+        run: bal run target/bin/conference_service_ballerina.jar  & sh .scripts/simple-test.sh
 
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
@@ -46,7 +46,7 @@ jobs:
         run: bal build --graalvm
 
       - name: Run and Test with GraalVM
-        run: ./target/bin/conference_service_ballerina & sh .scripts/test.sh graalvm stop
+        run: ./target/bin/conference_service_ballerina & sh .scripts/simple-test.sh
 
       - name: Stop Docker compose
         run: docker-compose down
@@ -78,13 +78,13 @@ jobs:
           sleep 30
 
       - name: Run and Test
-        run: java  -jar target/conference_service_micronaut-1.0.jar & sh .scripts/test.sh stop
+        run: java  -jar target/conference_service_micronaut-1.0.jar & sh .scripts/simple-test.sh
 
       - name: Build with GraalVM
         run: ./mvnw package -Dpackaging=native-image
 
       - name: Run and Test with GraalVM
-        run: target/conference_service_micronaut & sh .scripts/test.sh graalvm stop
+        run: target/conference_service_micronaut & sh .scripts/simple-test.sh
 
       - name: Stop Docker compose
         run: docker-compose down
@@ -116,13 +116,13 @@ jobs:
           sleep 30
 
       - name: Run and Test
-        run: java -jar target/conference_service_quarkus-1.0.0-runner.jar & sh .scripts/test.sh stop
+        run: java -jar target/conference_service_quarkus-1.0.0-runner.jar & sh .scripts/simple-test.sh
 
       - name: Build with GraalVM
         run: ./mvnw install -Dnative -Dquarkus.native.builder-image=graalvm
 
       - name: Run and Test with GraalVM
-        run: target/conference_service_quarkus-1.0.0-runner & sh .scripts/test.sh graalvm stop
+        run: target/conference_service_quarkus-1.0.0-runner & sh .scripts/simple-test.sh
 
       - name: Stop Docker compose
         run: docker-compose down
@@ -154,13 +154,13 @@ jobs:
           sleep 30
 
       - name: Run and Test
-        run: java -jar target/conference_service_springboot-1.0.0.jar & sh .scripts/test.sh stop
+        run: java -jar target/conference_service_springboot-1.0.0.jar & sh .scripts/simple-test.sh
 
       - name: Build with GraalVM
         run: ./mvnw -Pnative native:compile
 
       - name: Run and Test with GraalVM
-        run: target/conference_service_springboot & sh .scripts/test.sh graalvm stop
+        run: target/conference_service_springboot & sh .scripts/simple-test.sh
 
       - name: Stop Docker compose
         run: docker-compose down
