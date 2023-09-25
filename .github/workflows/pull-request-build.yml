@@ -65,7 +65,7 @@ jobs:
             java-version: '17'
             distribution: 'graalvm-community'
             github-token: ${{ secrets.GITHUB_TOKEN }}
-            set-java-home: 'false'
+            set-java-home: 'true'
 
       - name: Build
         run: ./mvnw package
@@ -101,7 +101,7 @@ jobs:
             java-version: '17'
             distribution: 'graalvm-community'
             github-token: ${{ secrets.GITHUB_TOKEN }}
-            set-java-home: 'false'
+            set-java-home: 'true'
 
       - name: Build
         run: ./mvnw package -Dquarkus.package.type=uber-jar
@@ -137,7 +137,7 @@ jobs:
             java-version: '17'
             distribution: 'graalvm-community'
             github-token: ${{ secrets.GITHUB_TOKEN }}
-            set-java-home: 'false'
+            set-java-home: 'true'
 
       - name: Build
         run: ./mvnw package
