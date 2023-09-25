@@ -23,7 +23,7 @@ jobs:
         with:
           version: 2201.8.0
 
-      - name: Replace `gdate` usage with `date
+      - name: Replace `gdate` usage with `date`
         run: |
           sed -i 's/gdate/date/g' run.sh
           sed -i 's/gdate/date/g' build.sh
