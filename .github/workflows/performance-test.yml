@@ -10,10 +10,24 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Set up GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+            java-version: '17'
+            distribution: 'graalvm-community'
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            set-java-home: 'true'
+
       - name: Setup Ballerina
         uses: ballerina-platform/setup-ballerina@v1
         with:
           version: 2201.8.0
+
+      - name: Replace `gdate` usage with `date
+        run: |
+          sed -i 's/gdate/date/g' run.sh
+          sed -i 's/gdate/date/g' build.sh
+        working-directory: ballerina/.scripts
 
       - name: Run Performance Test
         run: python3 performTest.py
