@@ -1,6 +1,0 @@
-applicationType: default
-defaultPackage: nl.craftsmen.conference
-testFramework: junit
-sourceLanguage: java
-buildTool: maven
-features: [annotation-api, app-name, data, data-jdbc, graalvm, h2, hibernate-jpa, http-client, jackson-databind, java, java-application, jdbc-tomcat, junit, logback, maven, micronaut-validation, netty-server, readme, shade, yaml]

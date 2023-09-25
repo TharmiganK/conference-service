@@ -1,0 +1,17 @@
+[package]
+org = "tharmigan"
+name = "conference_service_ballerina"
+version = "0.1.0"
+distribution = "2201.8.0"
+
+[persist]
+datastore = "mysql"
+module = "conference_service_ballerina.db"
+
+[platform.java17]
+graalvmCompatible = true
+
+[[platform.java17.dependency]]
+groupId = "io.ballerina.stdlib"
+artifactId = "persist.sql-native"
+version = "1.2.0"

@@ -1,0 +1,460 @@
+Memory usage after start up
+0.0% 1.26562M grep conference_service_quarkus 
+0.0% 69.3906M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+Response Code 1: 202
+Response Time 1: 0.148617
+
+Memory usage after first request
+3.2% 82.1094M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.375M grep conference_service_quarkus 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010895
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009409
+
+GET Response Code 4: 200
+GET Response Time 4: 0.014344
+
+GET Response Code 5: 200
+GET Response Time 5: 0.076966
+
+Memory usage after five requests
+4.6% 93.1562M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.009561
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010666
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009745
+
+GET Response Code 4: 200
+GET Response Time 4: 0.007218
+
+GET Response Code 5: 200
+GET Response Time 5: 0.058735
+
+Memory usage after ten requests
+3.0% 94.7969M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 1.26562M grep conference_service_quarkus 
+0.0% 68.9688M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+Response Code 1: 202
+Response Time 1: 0.028889
+
+Memory usage after first request
+0.0% 1.26562M grep conference_service_quarkus 
+0.0% 81.7031M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010527
+
+POST Response Code 3: 202
+POST Response Time 3: 0.010918
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012163
+
+GET Response Code 5: 200
+GET Response Time 5: 0.039703
+
+Memory usage after five requests
+4.0% 92.7656M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.375M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.010116
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010145
+
+POST Response Code 3: 202
+POST Response Time 3: 0.011123
+
+GET Response Code 4: 200
+GET Response Time 4: 0.004866
+
+GET Response Code 5: 200
+GET Response Time 5: 0.063721
+
+Memory usage after ten requests
+3.1% 94.4219M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.375M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 68.9219M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.026716
+
+Memory usage after first request
+2.8% 81.6562M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.012066
+
+POST Response Code 3: 202
+POST Response Time 3: 0.010838
+
+GET Response Code 4: 200
+GET Response Time 4: 0.011987
+
+GET Response Code 5: 200
+GET Response Time 5: 0.049995
+
+Memory usage after five requests
+2.1% 92.7031M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.009871
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.009687
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009701
+
+GET Response Code 4: 200
+GET Response Time 4: 0.007133
+
+GET Response Code 5: 200
+GET Response Time 5: 0.043738
+
+Memory usage after ten requests
+3.2% 94.3906M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.375M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 69.0625M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.375M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.026475
+
+Memory usage after first request
+0.0% 81.7969M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.011354
+
+POST Response Code 3: 202
+POST Response Time 3: 0.010006
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012372
+
+GET Response Code 5: 200
+GET Response Time 5: 0.044820
+
+Memory usage after five requests
+3.1% 92.8281M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.009786
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.009188
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009781
+
+GET Response Code 4: 200
+GET Response Time 4: 0.007581
+
+GET Response Code 5: 200
+GET Response Time 5: 0.061839
+
+Memory usage after ten requests
+3.1% 94.4688M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 1.26562M grep conference_service_quarkus 
+0.0% 68.9375M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+Response Code 1: 202
+Response Time 1: 0.101895
+
+Memory usage after first request
+2.4% 81.6562M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.375M grep conference_service_quarkus 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.011327
+
+POST Response Code 3: 202
+POST Response Time 3: 0.012965
+
+GET Response Code 4: 200
+GET Response Time 4: 0.017316
+
+GET Response Code 5: 200
+GET Response Time 5: 0.043305
+
+Memory usage after five requests
+3.4% 92.6875M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.009601
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.009460
+
+POST Response Code 3: 202
+POST Response Time 3: 0.008948
+
+GET Response Code 4: 200
+GET Response Time 4: 0.007305
+
+GET Response Code 5: 200
+GET Response Time 5: 0.051126
+
+Memory usage after ten requests
+2.7% 94.3281M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 69.1094M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.375M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.020857
+
+Memory usage after first request
+0.0% 1.26562M grep conference_service_quarkus 
+0.0% 81.8438M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.011806
+
+POST Response Code 3: 202
+POST Response Time 3: 0.006942
+
+GET Response Code 4: 200
+GET Response Time 4: 0.011090
+
+GET Response Code 5: 200
+GET Response Time 5: 0.038467
+
+Memory usage after five requests
+3.2% 92.875M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.010364
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010210
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009968
+
+GET Response Code 4: 200
+GET Response Time 4: 0.007013
+
+GET Response Code 5: 200
+GET Response Time 5: 0.051078
+
+Memory usage after ten requests
+3.5% 94.5156M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 68.75M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.027284
+
+Memory usage after first request
+0.0% 1.375M grep conference_service_quarkus 
+0.0% 81.5156M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010853
+
+POST Response Code 3: 202
+POST Response Time 3: 0.010904
+
+GET Response Code 4: 200
+GET Response Time 4: 0.011124
+
+GET Response Code 5: 200
+GET Response Time 5: 0.034380
+
+Memory usage after five requests
+3.0% 92.5781M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.009600
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.009233
+
+POST Response Code 3: 202
+POST Response Time 3: 0.008430
+
+GET Response Code 4: 200
+GET Response Time 4: 0.008276
+
+GET Response Code 5: 200
+GET Response Time 5: 0.059512
+
+Memory usage after ten requests
+3.0% 94.2188M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 1.26562M grep conference_service_quarkus 
+0.0% 68.9688M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+Response Code 1: 202
+Response Time 1: 0.031026
+
+Memory usage after first request
+0.0% 1.375M grep conference_service_quarkus 
+0.0% 81.6875M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.012193
+
+POST Response Code 3: 202
+POST Response Time 3: 0.008605
+
+GET Response Code 4: 200
+GET Response Time 4: 0.011128
+
+GET Response Code 5: 200
+GET Response Time 5: 0.041381
+
+Memory usage after five requests
+3.5% 92.7188M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.010515
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.008888
+
+POST Response Code 3: 202
+POST Response Time 3: 0.008868
+
+GET Response Code 4: 200
+GET Response Time 4: 0.007348
+
+GET Response Code 5: 200
+GET Response Time 5: 0.051910
+
+Memory usage after ten requests
+3.0% 94.3594M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.6% 1.26562M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 1.375M grep conference_service_quarkus 
+0.0% 68.8906M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+Response Code 1: 202
+Response Time 1: 0.142682
+
+Memory usage after first request
+2.4% 81.6406M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.016579
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009993
+
+GET Response Code 4: 200
+GET Response Time 4: 0.010594
+
+GET Response Code 5: 200
+GET Response Time 5: 0.047459
+
+Memory usage after five requests
+1.7% 92.6875M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 0.59375M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.010241
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.009989
+
+POST Response Code 3: 202
+POST Response Time 3: 0.010683
+
+GET Response Code 4: 200
+GET Response Time 4: 0.007059
+
+GET Response Code 5: 200
+GET Response Time 5: 0.046246
+
+Memory usage after ten requests
+2.9% 94.3281M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 0.109375M grep conference_service_quarkus 
+Memory usage after start up
+0.0% 69.125M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.027354
+
+Memory usage after first request
+0.0% 1.26562M grep conference_service_quarkus 
+0.0% 81.8438M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010558
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009226
+
+GET Response Code 4: 200
+GET Response Time 4: 0.011825
+
+GET Response Code 5: 200
+GET Response Time 5: 0.038263
+
+Memory usage after five requests
+3.1% 92.875M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 
+
+Response Code 1: 202
+Response Time 1: 0.009916
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.010643
+
+POST Response Code 3: 202
+POST Response Time 3: 0.009560
+
+GET Response Code 4: 200
+GET Response Time 4: 0.006292
+
+GET Response Code 5: 200
+GET Response Time 5: 0.043069
+
+Memory usage after ten requests
+3.4% 94.5156M ../target/conference_service_quarkus-1.0.0-runner -Xmx512m 
+0.0% 1.26562M grep conference_service_quarkus 

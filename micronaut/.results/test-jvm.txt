@@ -1,0 +1,460 @@
+Memory usage after start up
+0.0% 0.609375M grep conference_service_micronaut 
+0.0% 174.625M java -Xmx512m -jar
+
+Response Code 1: 202
+Response Time 1: 0.326913
+
+Memory usage after first request
+124.6% 232.688M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.019078
+
+POST Response Code 3: 202
+POST Response Time 3: 0.016318
+
+GET Response Code 4: 200
+GET Response Time 4: 0.028897
+
+GET Response Code 5: 200
+GET Response Time 5: 0.755912
+
+Memory usage after five requests
+14.4% 262.766M java -Xmx512m -jar
+0.0% 0.796875M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.018297
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.015564
+
+POST Response Code 3: 202
+POST Response Time 3: 0.014829
+
+GET Response Code 4: 200
+GET Response Time 4: 0.010657
+
+GET Response Code 5: 200
+GET Response Time 5: 0.159662
+
+Memory usage after ten requests
+30.4% 297.672M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 1.375M grep conference_service_micronaut 
+0.0% 175.094M java -Xmx512m -jar
+
+Response Code 1: 202
+Response Time 1: 0.311073
+
+Memory usage after first request
+101.1% 260M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.015036
+
+POST Response Code 3: 202
+POST Response Time 3: 0.014090
+
+GET Response Code 4: 200
+GET Response Time 4: 0.031349
+
+GET Response Code 5: 200
+GET Response Time 5: 0.131668
+
+Memory usage after five requests
+111.4% 268.391M java -Xmx512m -jar
+0.0% 1.375M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.017907
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.014570
+
+POST Response Code 3: 202
+POST Response Time 3: 0.015030
+
+GET Response Code 4: 200
+GET Response Time 4: 0.010833
+
+GET Response Code 5: 200
+GET Response Time 5: 0.326250
+
+Memory usage after ten requests
+30.1% 304.125M java -Xmx512m -jar
+0.0% 1.375M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 178.234M java -Xmx512m -jar
+0.0% 1.375M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.311228
+
+Memory usage after first request
+106.8% 228.375M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.019202
+
+POST Response Code 3: 202
+POST Response Time 3: 0.014281
+
+GET Response Code 4: 200
+GET Response Time 4: 0.025973
+
+GET Response Code 5: 200
+GET Response Time 5: 0.124100
+
+Memory usage after five requests
+111.9% 262.906M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.016438
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.012310
+
+POST Response Code 3: 202
+POST Response Time 3: 0.016522
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012028
+
+GET Response Code 5: 200
+GET Response Time 5: 0.149598
+
+Memory usage after ten requests
+69.4% 297.641M java -Xmx512m -jar
+0.0% 1.375M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 153.578M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.329133
+
+Memory usage after first request
+107.4% 211.781M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.017092
+
+POST Response Code 3: 202
+POST Response Time 3: 0.014993
+
+GET Response Code 4: 200
+GET Response Time 4: 0.030494
+
+GET Response Code 5: 200
+GET Response Time 5: 0.117509
+
+Memory usage after five requests
+117.0% 252.984M java -Xmx512m -jar
+0.0% 1.375M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.017022
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.012555
+
+POST Response Code 3: 202
+POST Response Time 3: 0.014073
+
+GET Response Code 4: 200
+GET Response Time 4: 0.013049
+
+GET Response Code 5: 200
+GET Response Time 5: 0.141299
+
+Memory usage after ten requests
+72.9% 289.781M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 1.375M grep conference_service_micronaut 
+0.0% 177.734M java -Xmx512m -jar
+
+Response Code 1: 202
+Response Time 1: 0.337573
+
+Memory usage after first request
+118.4% 230.453M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.015737
+
+POST Response Code 3: 202
+POST Response Time 3: 0.014767
+
+GET Response Code 4: 200
+GET Response Time 4: 0.030914
+
+GET Response Code 5: 200
+GET Response Time 5: 0.139876
+
+Memory usage after five requests
+121.3% 262.984M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.017093
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.016367
+
+POST Response Code 3: 202
+POST Response Time 3: 0.012772
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012686
+
+GET Response Code 5: 200
+GET Response Time 5: 0.144393
+
+Memory usage after ten requests
+55.8% 297.297M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 177.938M java -Xmx512m -jar
+0.0% 1.29688M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.329629
+
+Memory usage after first request
+119.9% 230.859M java -Xmx512m -jar
+0.0% 1.375M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.014919
+
+POST Response Code 3: 202
+POST Response Time 3: 0.013010
+
+GET Response Code 4: 200
+GET Response Time 4: 0.030081
+
+GET Response Code 5: 200
+GET Response Time 5: 0.123718
+
+Memory usage after five requests
+109.6% 263.484M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.018269
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.016695
+
+POST Response Code 3: 202
+POST Response Time 3: 0.018059
+
+GET Response Code 4: 200
+GET Response Time 4: 0.014393
+
+GET Response Code 5: 200
+GET Response Time 5: 0.140256
+
+Memory usage after ten requests
+74.2% 298.078M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 1.26562M grep conference_service_micronaut 
+0.0% 177.672M java -Xmx512m -jar
+
+Response Code 1: 202
+Response Time 1: 0.307969
+
+Memory usage after first request
+132.2% 234.234M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.016440
+
+POST Response Code 3: 202
+POST Response Time 3: 0.015393
+
+GET Response Code 4: 200
+GET Response Time 4: 0.028033
+
+GET Response Code 5: 200
+GET Response Time 5: 0.133225
+
+Memory usage after five requests
+135.5% 263.797M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.016330
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.011598
+
+POST Response Code 3: 202
+POST Response Time 3: 0.014279
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012045
+
+GET Response Code 5: 200
+GET Response Time 5: 0.096098
+
+Memory usage after ten requests
+81.8% 297.078M java -Xmx512m -jar
+0.0% 1.29688M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 1.26562M grep conference_service_micronaut 
+0.0% 177.859M java -Xmx512m -jar
+
+Response Code 1: 202
+Response Time 1: 0.313282
+
+Memory usage after first request
+126.7% 231.672M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.014214
+
+POST Response Code 3: 202
+POST Response Time 3: 0.012874
+
+GET Response Code 4: 200
+GET Response Time 4: 0.028475
+
+GET Response Code 5: 200
+GET Response Time 5: 0.120370
+
+Memory usage after five requests
+110.3% 264.328M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.016261
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.013562
+
+POST Response Code 3: 202
+POST Response Time 3: 0.012481
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012322
+
+GET Response Code 5: 200
+GET Response Time 5: 0.087075
+
+Memory usage after ten requests
+77.9% 298.719M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 1.26562M grep conference_service_micronaut 
+0.0% 179.219M java -Xmx512m -jar
+
+Response Code 1: 202
+Response Time 1: 0.305677
+
+Memory usage after first request
+106.2% 232.672M java -Xmx512m -jar
+0.0% 1.375M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.016382
+
+POST Response Code 3: 202
+POST Response Time 3: 0.013275
+
+GET Response Code 4: 200
+GET Response Time 4: 0.027911
+
+GET Response Code 5: 200
+GET Response Time 5: 0.127859
+
+Memory usage after five requests
+116.4% 269.281M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.015912
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.015448
+
+POST Response Code 3: 202
+POST Response Time 3: 0.013791
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012983
+
+GET Response Code 5: 200
+GET Response Time 5: 0.091637
+
+Memory usage after ten requests
+71.2% 306.016M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+Memory usage after start up
+0.0% 1.26562M grep conference_service_micronaut 
+0.0% 178.297M java -Xmx512m -jar
+
+Response Code 1: 202
+Response Time 1: 0.321739
+
+Memory usage after first request
+127.5% 232.188M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 
+
+POST Response Code 2: 202
+POST Response Time 2: 0.017522
+
+POST Response Code 3: 202
+POST Response Time 3: 0.013881
+
+GET Response Code 4: 200
+GET Response Time 4: 0.029043
+
+GET Response Code 5: 200
+GET Response Time 5: 0.121707
+
+Memory usage after five requests
+115.4% 264.812M java -Xmx512m -jar
+0.0% 0.828125M grep conference_service_micronaut 
+
+Response Code 1: 202
+Response Time 1: 0.015546
+
+
+POST Response Code 2: 202
+POST Response Time 2: 0.014181
+
+POST Response Code 3: 202
+POST Response Time 3: 0.012818
+
+GET Response Code 4: 200
+GET Response Time 4: 0.012156
+
+GET Response Code 5: 200
+GET Response Time 5: 0.090902
+
+Memory usage after ten requests
+88.0% 299.109M java -Xmx512m -jar
+0.0% 1.26562M grep conference_service_micronaut 

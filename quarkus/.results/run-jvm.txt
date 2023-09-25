@@ -1,0 +1,90 @@
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:35:59,421 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.554s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:35:59,422 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:35:59,422 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:36:19,495 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.018s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:36:30,938 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.344s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:36:30,939 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:36:30,939 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:36:50,582 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.018s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:37:02,021 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.339s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:37:02,022 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:37:02,022 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:37:21,782 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.015s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:37:33,210 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.326s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:37:33,210 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:37:33,210 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:37:52,933 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.019s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:38:04,512 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.485s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:38:04,513 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:38:04,513 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:38:24,056 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.018s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:38:35,466 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.324s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:38:35,467 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:38:35,467 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:38:55,121 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.019s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:39:06,542 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.325s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:39:06,543 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:39:06,543 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:39:26,212 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.018s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:39:37,651 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.342s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:39:37,652 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:39:37,652 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:39:57,319 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.020s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:40:09,005 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.590s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:40:09,006 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:40:09,006 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:40:28,424 INFO  [io.quarkus] (Shutdown thread) conference_service_quarkus stopped in 0.018s
+
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2023-09-24 20:40:39,865 INFO  [io.quarkus] (main) conference_service_quarkus 1.0.0 on JVM (powered by Quarkus 3.3.1) started in 1.338s. Listening on: http://0.0.0.0:8100
+2023-09-24 20:40:39,866 INFO  [io.quarkus] (main) Profile prod activated. 
+2023-09-24 20:40:39,866 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, narayana-jta, rest-client, rest-client-jackson, resteasy, resteasy-jackson, resteasy-jsonb, smallrye-context-propagation, smallrye-fault-tolerance, vertx]
+2023-09-24 20:47:54,510 INFO  [io.quarkus] (main) conference_service_quarkus stopped in 0.021s
+

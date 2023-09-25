@@ -1,0 +1,172 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< tk.tharmi:conference_service_micronaut >---------------
+[INFO] Building conference_service_micronaut 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ conference_service_micronaut ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ conference_service_micronaut ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ conference_service_micronaut ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ conference_service_micronaut ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- mn:3.5.4:start-testresources-service (default-start-testresources-service) @ conference_service_micronaut ---
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ conference_service_micronaut ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- mn:3.5.4:aot-analysis (default-aot-analysis) @ conference_service_micronaut ---
+[INFO] Running Micronaut AOT 1.1.2 aot-analysis
+[INFO] Packaging project
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes
+[INFO] Executing Micronaut AOT analysis
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] Using AOT configuration file: /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/aot-jar.properties
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+20:03:03.386 [main] INFO 
+                i.m.aot.MicronautAotOptimizer - Analysis will be performed with active environments: []
+[INFO] 
+[INFO] --- mn:3.5.4:graalvm-resources (default-graalvm-resources) @ conference_service_micronaut ---
+[INFO] Generating /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/classes/META-INF/native-image/tk.tharmi/conference_service_micronaut/resource-config.json
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ conference_service_micronaut ---
+[INFO] Building jar: /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut-1.0.jar
+[INFO] 
+[INFO] --- shade:3.2.4:shade (default-shade) @ conference_service_micronaut ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] Including io.micronaut:micronaut-http-client:jar:3.10.1 in the shaded jar.
+[INFO] Including org.slf4j:slf4j-api:jar:1.7.36 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-runtime:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-http:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-aop:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-context:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-http-client-core:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-websocket:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-http-netty:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-buffer-netty:jar:3.10.1 in the shaded jar.
+[INFO] Including io.netty:netty-codec-http2:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-handler:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-resolver:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-transport-native-unix-common:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-handler-proxy:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-common:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-buffer:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-transport:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-codec:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.netty:netty-codec-socks:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.projectreactor:reactor-core:jar:3.5.0 in the shaded jar.
+[INFO] Including org.reactivestreams:reactive-streams:jar:1.0.4 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-http-server-netty:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-http-server:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-core:jar:3.10.1 in the shaded jar.
+[INFO] Including io.netty:netty-codec-http:jar:4.1.94.Final in the shaded jar.
+[INFO] Including io.micronaut:micronaut-jackson-databind:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-jackson-core:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-json-core:jar:3.10.1 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-core:jar:2.15.0 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-databind:jar:2.15.0 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.0 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-management:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-router:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-validation:jar:3.10.1 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-inject:jar:3.10.1 in the shaded jar.
+[INFO] Including javax.annotation:javax.annotation-api:jar:1.3.2 in the shaded jar.
+[INFO] Including jakarta.inject:jakarta.inject-api:jar:2.0.1 in the shaded jar.
+[INFO] Including org.yaml:snakeyaml:jar:2.0 in the shaded jar.
+[INFO] Including io.micronaut:micronaut-core-reactive:jar:3.10.1 in the shaded jar.
+[INFO] Including javax.validation:validation-api:jar:2.0.1.Final in the shaded jar.
+[INFO] Including io.micronaut.data:micronaut-data-hibernate-jpa:jar:3.10.0 in the shaded jar.
+[INFO] Including io.micronaut.data:micronaut-data-runtime:jar:3.10.0 in the shaded jar.
+[INFO] Including io.micronaut.data:micronaut-data-model:jar:3.10.0 in the shaded jar.
+[INFO] Including io.micronaut.data:micronaut-data-tx:jar:3.10.0 in the shaded jar.
+[INFO] Including javax.transaction:javax.transaction-api:jar:1.3 in the shaded jar.
+[INFO] Including jakarta.persistence:jakarta.persistence-api:jar:2.2.3 in the shaded jar.
+[INFO] Including org.hibernate:hibernate-core:jar:5.6.15.Final in the shaded jar.
+[INFO] Including org.jboss.logging:jboss-logging:jar:3.4.3.Final in the shaded jar.
+[INFO] Including net.bytebuddy:byte-buddy:jar:1.12.18 in the shaded jar.
+[INFO] Including antlr:antlr:jar:2.7.7 in the shaded jar.
+[INFO] Including org.jboss:jandex:jar:2.4.2.Final in the shaded jar.
+[INFO] Including com.fasterxml:classmate:jar:1.5.1 in the shaded jar.
+[INFO] Including javax.activation:javax.activation-api:jar:1.2.0 in the shaded jar.
+[INFO] Including org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final in the shaded jar.
+[INFO] Including javax.xml.bind:jaxb-api:jar:2.3.1 in the shaded jar.
+[INFO] Including org.glassfish.jaxb:jaxb-runtime:jar:2.3.1 in the shaded jar.
+[INFO] Including org.glassfish.jaxb:txw2:jar:2.3.1 in the shaded jar.
+[INFO] Including com.sun.istack:istack-commons-runtime:jar:3.0.7 in the shaded jar.
+[INFO] Including org.jvnet.staxex:stax-ex:jar:1.8 in the shaded jar.
+[INFO] Including com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15 in the shaded jar.
+[INFO] Including io.micronaut.data:micronaut-data-tx-hibernate:jar:3.10.0 in the shaded jar.
+[INFO] Including io.micronaut.sql:micronaut-hibernate-jpa:jar:4.8.1 in the shaded jar.
+[INFO] Including jakarta.transaction:jakarta.transaction-api:jar:1.3.3 in the shaded jar.
+[INFO] Including io.micronaut.sql:micronaut-jdbc-hikari:jar:4.8.1 in the shaded jar.
+[INFO] Including io.micronaut.sql:micronaut-jdbc:jar:4.8.1 in the shaded jar.
+[INFO] Including com.zaxxer:HikariCP:jar:4.0.3 in the shaded jar.
+[INFO] Including jakarta.annotation:jakarta.annotation-api:jar:2.1.1 in the shaded jar.
+[INFO] Including ch.qos.logback:logback-classic:jar:1.2.11 in the shaded jar.
+[INFO] Including ch.qos.logback:logback-core:jar:1.2.11 in the shaded jar.
+[INFO] Including com.mysql:mysql-connector-j:jar:8.0.32 in the shaded jar.
+[INFO] Including com.google.protobuf:protobuf-java:jar:3.21.12 in the shaded jar.
+[WARNING] FastInfoset-1.2.15.jar, HikariCP-4.0.3.jar, antlr-2.7.7.jar, byte-buddy-1.12.18.jar, classmate-1.5.1.jar, conference_service_micronaut-1.0.jar, hibernate-commons-annotations-5.1.2.Final.jar, hibernate-core-5.6.15.Final.jar, istack-commons-runtime-3.0.7.jar, jackson-annotations-2.15.0.jar, jackson-core-2.15.0.jar, jackson-databind-2.15.0.jar, jackson-datatype-jdk8-2.15.0.jar, jackson-datatype-jsr310-2.15.0.jar, jakarta.annotation-api-2.1.1.jar, jakarta.inject-api-2.0.1.jar, jakarta.persistence-api-2.2.3.jar, jakarta.transaction-api-1.3.3.jar, jandex-2.4.2.Final.jar, javax.activation-api-1.2.0.jar, javax.annotation-api-1.3.2.jar, javax.transaction-api-1.3.jar, jaxb-api-2.3.1.jar, jaxb-runtime-2.3.1.jar, jboss-logging-3.4.3.Final.jar, logback-classic-1.2.11.jar, logback-core-1.2.11.jar, micronaut-aop-3.10.1.jar, micronaut-buffer-netty-3.10.1.jar, micronaut-context-3.10.1.jar, micronaut-core-3.10.1.jar, micronaut-core-reactive-3.10.1.jar, micronaut-data-hibernate-jpa-3.10.0.jar, micronaut-data-model-3.10.0.jar, micronaut-data-runtime-3.10.0.jar, micronaut-data-tx-3.10.0.jar, micronaut-data-tx-hibernate-3.10.0.jar, micronaut-hibernate-jpa-4.8.1.jar, micronaut-http-3.10.1.jar, micronaut-http-client-3.10.1.jar, micronaut-http-client-core-3.10.1.jar, micronaut-http-netty-3.10.1.jar, micronaut-http-server-3.10.1.jar, micronaut-http-server-netty-3.10.1.jar, micronaut-inject-3.10.1.jar, micronaut-jackson-core-3.10.1.jar, micronaut-jackson-databind-3.10.1.jar, micronaut-jdbc-4.8.1.jar, micronaut-jdbc-hikari-4.8.1.jar, micronaut-json-core-3.10.1.jar, micronaut-management-3.10.1.jar, micronaut-router-3.10.1.jar, micronaut-runtime-3.10.1.jar, micronaut-validation-3.10.1.jar, micronaut-websocket-3.10.1.jar, mysql-connector-j-8.0.32.jar, netty-buffer-4.1.94.Final.jar, netty-codec-4.1.94.Final.jar, netty-codec-http-4.1.94.Final.jar, netty-codec-http2-4.1.94.Final.jar, netty-codec-socks-4.1.94.Final.jar, netty-common-4.1.94.Final.jar, netty-handler-4.1.94.Final.jar, netty-handler-proxy-4.1.94.Final.jar, netty-resolver-4.1.94.Final.jar, netty-transport-4.1.94.Final.jar, netty-transport-native-unix-common-4.1.94.Final.jar, protobuf-java-3.21.12.jar, reactive-streams-1.0.4.jar, reactor-core-3.5.0.jar, slf4j-api-1.7.36.jar, snakeyaml-2.0.jar, stax-ex-1.8.jar, txw2-2.3.1.jar, validation-api-2.0.1.Final.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/MANIFEST.MF
+[WARNING] micronaut-buffer-netty-3.10.1.jar, micronaut-context-3.10.1.jar, micronaut-data-runtime-3.10.0.jar, micronaut-hibernate-jpa-4.8.1.jar, micronaut-http-3.10.1.jar, micronaut-http-client-core-3.10.1.jar, micronaut-http-netty-3.10.1.jar, micronaut-http-server-3.10.1.jar, micronaut-http-server-netty-3.10.1.jar, micronaut-jackson-databind-3.10.1.jar, micronaut-jdbc-hikari-4.8.1.jar, micronaut-management-3.10.1.jar, micronaut-router-3.10.1.jar, micronaut-runtime-3.10.1.jar, micronaut-validation-3.10.1.jar define 2 overlapping resources: 
+[WARNING]   - META-INF/config-properties.adoc
+[WARNING]   - META-INF/spring-configuration-metadata.json
+[WARNING] netty-buffer-4.1.94.Final.jar, netty-codec-4.1.94.Final.jar, netty-codec-http-4.1.94.Final.jar, netty-codec-http2-4.1.94.Final.jar, netty-codec-socks-4.1.94.Final.jar, netty-common-4.1.94.Final.jar, netty-handler-4.1.94.Final.jar, netty-handler-proxy-4.1.94.Final.jar, netty-resolver-4.1.94.Final.jar, netty-transport-4.1.94.Final.jar, netty-transport-native-unix-common-4.1.94.Final.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/io.netty.versions.properties
+[WARNING] byte-buddy-1.12.18.jar, classmate-1.5.1.jar, jackson-annotations-2.15.0.jar, jackson-core-2.15.0.jar, jackson-databind-2.15.0.jar, jackson-datatype-jdk8-2.15.0.jar, jackson-datatype-jsr310-2.15.0.jar, micronaut-core-3.10.1.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/LICENSE
+[WARNING] byte-buddy-1.12.18.jar, classmate-1.5.1.jar, jackson-annotations-2.15.0.jar, jackson-core-2.15.0.jar, jackson-databind-2.15.0.jar, jackson-datatype-jdk8-2.15.0.jar, jackson-datatype-jsr310-2.15.0.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/NOTICE
+[WARNING] byte-buddy-1.12.18.jar, jackson-core-2.15.0.jar, jackson-databind-2.15.0.jar, jackson-datatype-jdk8-2.15.0.jar, jackson-datatype-jsr310-2.15.0.jar, snakeyaml-2.0.jar define 1 overlapping classes: 
+[WARNING]   - META-INF.versions.9.module-info
+[WARNING] jakarta.inject-api-2.0.1.jar, javax.activation-api-1.2.0.jar, javax.annotation-api-1.3.2.jar, javax.transaction-api-1.3.jar, jaxb-api-2.3.1.jar, jboss-logging-3.4.3.Final.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/LICENSE.txt
+[WARNING] jakarta.annotation-api-2.1.1.jar, jakarta.inject-api-2.0.1.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/NOTICE.md
+[WARNING] jakarta.transaction-api-1.3.3.jar, javax.transaction-api-1.3.jar define 20 overlapping class and resource: 
+[WARNING]   - javax.transaction.HeuristicCommitException
+[WARNING]   - javax.transaction.HeuristicMixedException
+[WARNING]   - javax.transaction.HeuristicRollbackException
+[WARNING]   - javax.transaction.InvalidTransactionException
+[WARNING]   - javax.transaction.NotSupportedException
+[WARNING]   - javax.transaction.RollbackException
+[WARNING]   - javax.transaction.Status
+[WARNING]   - javax.transaction.Synchronization
+[WARNING]   - javax.transaction.SystemException
+[WARNING]   - javax.transaction.Transaction
+[WARNING]   - 10 more...
+[WARNING] maven-shade-plugin has detected that some class files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the class is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See http://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut-1.0.jar with /Users/wso2/Documents/graalvm-comparison/conference-service/micronaut/target/conference_service_micronaut-1.0-shaded.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.819 s
+[INFO] Finished at: 2023-09-24T20:03:06+05:30
+[INFO] ------------------------------------------------------------------------
