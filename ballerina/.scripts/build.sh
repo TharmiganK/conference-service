@@ -5,7 +5,7 @@ echo ""
 
 bal clean --target-dir ../target
 
-if [ ! -d "../ballerina/generated" ]; then
+if [ ! -d "../generated" ]; then
     echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Generating persist client code"
     echo ""
     bal persist generate
