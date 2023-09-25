@@ -68,3 +68,5 @@ nb-configuration.xml
 #Report
 **/.comparison/*.txt
 **/.comparison/*.png
+**/.results/*.txt
+**/.results/*.png
