@@ -1,0 +1,28 @@
+name: Performance Test
+
+on: workflow_dispatch
+
+jobs:
+  performance-test:
+    name: Performance Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Ballerina
+        uses: ballerina-platform/setup-ballerina@v1
+        with:
+          version: 2201.8.0
+
+      - name: Run Performance Test
+        run: python3 performTest.py
+        working-directory: .performance
+
+      - name: Generate Report
+        run: bal run
+        working-directory: .report
+
+      - name: Output Report
+        run:
+          cat ./report.md >> $GITHUB_STEP_SUMMARY
