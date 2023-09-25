@@ -1,0 +1,185 @@
+name: PR Build
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  ballerina-build:
+    name: Ballerina Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Ballerina
+        uses: ballerina-platform/setup-ballerina@v1
+        with:
+          version: 2201.8.0
+    
+      - name: Build
+        run: |
+          cd ballerina/.scripts
+          sh build.sh
+
+      - name: Run Docker compose
+        run: |
+          docker-compose up -d
+
+      - name: Run and Test
+        run: |
+          cd ballerina/.scripts
+          sh run.sh & sh test.sh stop
+
+      - name: Set up GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+            java-version: '17'
+            distribution: 'graalvm-community'
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            set-java-home: 'false'
+
+      - name: Build with GraalVM
+        run: |
+          cd ballerina/.scripts
+          sh build.sh graalvm
+
+      - name: Run and Test with GraalVM
+        run: |
+          cd ballerina/.scripts
+          sh run.sh graalvm & sh test.sh graalvm stop
+
+      - name: Stop Docker compose
+        run: |
+          docker-compose down
+
+  micronaut_build:
+    name: Micronaut Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+            java-version: '17'
+            distribution: 'graalvm-community'
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            set-java-home: 'false'
+
+      - name: Build
+        run: |
+          cd micronaut/.scripts
+          sh build.sh micronaut
+
+      - name: Run Docker compose
+        run: |
+          docker-compose up -d
+
+      - name: Run and Test
+        run: |
+          cd micronaut/.scripts
+          sh run.sh & sh test.sh stop
+
+      - name: Build with GraalVM
+        run: |
+          cd micronaut/.scripts
+          sh build.sh graalvm
+
+      - name: Run and Test with GraalVM
+        run: |
+          cd micronaut/.scripts
+          sh run.sh graalvm & sh test.sh graalvm stop
+
+      - name: Stop Docker compose
+        run: |
+          docker-compose down
+
+  quarkus_build:
+    name: Quarkus Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+            java-version: '17'
+            distribution: 'graalvm-community'
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            set-java-home: 'false'
+
+      - name: Build
+        run: |
+          cd quarkus/.scripts
+          sh build.sh quarkus
+
+      - name: Run Docker compose
+        run: |
+          docker-compose up -d
+
+      - name: Run and Test
+        run: |
+          cd quarkus/.scripts
+          sh run.sh & sh test.sh stop
+
+      - name: Build with GraalVM
+        run: |
+          cd quarkus/.scripts
+          sh build.sh graalvm
+
+      - name: Run and Test with GraalVM
+        run: |
+          cd quarkus/.scripts
+          sh run.sh graalvm & sh test.sh graalvm stop
+
+      - name: Stop Docker compose
+        run: |
+          docker-compose down
+
+  springboot_build:
+    name: Spring Boot Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+            java-version: '17'
+            distribution: 'graalvm-community'
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            set-java-home: 'false'
+
+      - name: Build
+        run: |
+          cd springboot/.scripts
+          sh build.sh springboot
+
+      - name: Run Docker compose
+        run: |
+          docker-compose up -d
+
+      - name: Run and Test
+        run: |
+          cd springboot/.scripts
+          sh run.sh & sh test.sh stop
+
+      - name: Build with GraalVM
+        run: |
+          cd springboot/.scripts
+          sh build.sh graalvm
+
+      - name: Run and Test with GraalVM
+        run: |
+          cd springboot/.scripts
+          sh run.sh graalvm & sh test.sh graalvm stop
+
+      - name: Stop Docker compose
+        run: |
+          docker-compose down
+  
