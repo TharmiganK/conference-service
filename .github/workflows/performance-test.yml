@@ -38,6 +38,10 @@ jobs:
           mv wrk wrk2
           sudo cp wrk2 /usr/local/bin
 
+      - name: Setup `psrecord`
+        run: |
+          pip3 install psrecord
+
       - name: Replace `gdate` usage with `date`
         run: |
           sed -i 's/gdate/date/g' run.sh
