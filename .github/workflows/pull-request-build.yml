@@ -25,6 +25,7 @@ jobs:
 
       - name: Run Docker compose
         run: |
+          cd ballerina
           docker-compose up -d
 
       - name: Run and Test
@@ -52,6 +53,7 @@ jobs:
 
       - name: Stop Docker compose
         run: |
+          cd ballerina
           docker-compose down
 
   micronaut_build:
@@ -72,10 +74,11 @@ jobs:
       - name: Build
         run: |
           cd micronaut/.scripts
-          sh build.sh micronaut
+          sh build.sh
 
       - name: Run Docker compose
         run: |
+          cd micronaut
           docker-compose up -d
 
       - name: Run and Test
@@ -95,6 +98,7 @@ jobs:
 
       - name: Stop Docker compose
         run: |
+          cd micronaut
           docker-compose down
 
   quarkus_build:
@@ -115,10 +119,11 @@ jobs:
       - name: Build
         run: |
           cd quarkus/.scripts
-          sh build.sh quarkus
+          sh build.sh
 
       - name: Run Docker compose
         run: |
+          cd quarkus
           docker-compose up -d
 
       - name: Run and Test
@@ -138,6 +143,7 @@ jobs:
 
       - name: Stop Docker compose
         run: |
+          cd quarkus
           docker-compose down
 
   springboot_build:
@@ -157,29 +163,31 @@ jobs:
 
       - name: Build
         run: |
-          cd springboot/.scripts
-          sh build.sh springboot
+          cd spring-boot/.scripts
+          sh build.sh
 
       - name: Run Docker compose
         run: |
+          cd spring-boot
           docker-compose up -d
 
       - name: Run and Test
         run: |
-          cd springboot/.scripts
+          cd spring-boot/.scripts
           sh run.sh & sh test.sh stop
 
       - name: Build with GraalVM
         run: |
-          cd springboot/.scripts
+          cd spring-boot/.scripts
           sh build.sh graalvm
 
       - name: Run and Test with GraalVM
         run: |
-          cd springboot/.scripts
+          cd spring-boot/.scripts
           sh run.sh graalvm & sh test.sh graalvm stop
 
       - name: Stop Docker compose
         run: |
+          cd spring-boot
           docker-compose down
   
