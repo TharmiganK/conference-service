@@ -30,7 +30,7 @@ jobs:
         run: docker-compose up -d
 
       - name: Run and Test
-        run: java -jar target/bin/conference_service_ballerina.jar  & sh .scripts/test.sh stop
+        run: bal run target/bin/conference_service_ballerina.jar  & sh .scripts/test.sh stop
 
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
