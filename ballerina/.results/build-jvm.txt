@@ -1,9 +1,0 @@
-Resolving Maven dependencies
-	Downloading dependencies into /Users/wso2/Documents/graalvm-comparison/conference-service/ballerina/.scripts/../../ballerina/target/platform-libs
-persist.sql-native-1.2.0.jar  14% [====>       ]  3/14 KB (0:00:00 / 0:00:00) persist.sql-native-1.2.0.jar 100% [============] 14/14 KB (0:00:00 / 0:00:00) 
-
-Compiling source
-	tharmigan/conference_service_ballerina:0.1.0
-
-Generating executable
-	/Users/wso2/Documents/graalvm-comparison/conference-service/ballerina/target/bin/conference_service_ballerina.jar

@@ -22,7 +22,11 @@ for directory in directories:
 
     # Step 1: Go inside the directory
     os.chdir("..")
-    os.chdir(directory + "/.scripts")
+    os.chdir(directory)
+    if not os.path.exists(".results"):
+        logging.info("Creating .results directory in {directory}")
+        os.mkdir(".results")
+    os.chdir(".scripts")
 
     # Step 2: Run clean.sh
     logging.info(f"Running 'sh clean.sh' in {directory}")

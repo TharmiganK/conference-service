@@ -2,7 +2,7 @@
 
 cd ../
 
-./mvnw clean
+./mvnw clean > ./.results/build.txt 2>&1
 
 if [ "$1" = "graalvm" ];
 then
