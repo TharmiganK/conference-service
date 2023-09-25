@@ -9,6 +9,9 @@ jobs:
   ballerina-build:
     name: Ballerina Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ballerina
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -20,18 +23,14 @@ jobs:
     
       - name: Build
         run: |
-          cd ballerina/.scripts
-          sh build.sh
+          bal persist generate
+          bal build
 
       - name: Run Docker compose
-        run: |
-          cd ballerina
-          docker-compose up -d
+        run: docker-compose up -d
 
       - name: Run and Test
-        run: |
-          cd ballerina/.scripts
-          sh run.sh & sh test.sh stop
+        run: java -jar target/bin/conference_service_ballerina.jar  & sh .scripts/test.sh stop
 
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
@@ -42,23 +41,20 @@ jobs:
             set-java-home: 'false'
 
       - name: Build with GraalVM
-        run: |
-          cd ballerina/.scripts
-          sh build.sh graalvm
+        run: bal build --graalvm
 
       - name: Run and Test with GraalVM
-        run: |
-          cd ballerina/.scripts
-          sh run.sh graalvm & sh test.sh graalvm stop
+        run: ./target/bin/conference_service_ballerina & sh .scripts/test.sh graalvm stop
 
       - name: Stop Docker compose
-        run: |
-          cd ballerina
-          docker-compose down
+        run: docker-compose down
 
   micronaut_build:
     name: Micronaut Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: micronaut
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -72,38 +68,29 @@ jobs:
             set-java-home: 'false'
 
       - name: Build
-        run: |
-          cd micronaut/.scripts
-          sh build.sh
+        run: ./mvnw package
 
       - name: Run Docker compose
-        run: |
-          cd micronaut
-          docker-compose up -d
+        run: docker-compose up -d
 
       - name: Run and Test
-        run: |
-          cd micronaut/.scripts
-          sh run.sh & sh test.sh stop
+        run: java  -jar target/conference_service_micronaut-1.0.jar & sh .scripts/test.sh stop
 
       - name: Build with GraalVM
-        run: |
-          cd micronaut/.scripts
-          sh build.sh graalvm
+        run: ./mvnw package -Dpackaging=native-image
 
       - name: Run and Test with GraalVM
-        run: |
-          cd micronaut/.scripts
-          sh run.sh graalvm & sh test.sh graalvm stop
+        run: target/conference_service_micronaut & sh .scripts/test.sh graalvm stop
 
       - name: Stop Docker compose
-        run: |
-          cd micronaut
-          docker-compose down
+        run: docker-compose down
 
   quarkus_build:
     name: Quarkus Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: quarkus
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -117,38 +104,29 @@ jobs:
             set-java-home: 'false'
 
       - name: Build
-        run: |
-          cd quarkus/.scripts
-          sh build.sh
+        run: ./mvnw package -Dquarkus.package.type=uber-jar
 
       - name: Run Docker compose
-        run: |
-          cd quarkus
-          docker-compose up -d
+        run: docker-compose up -d
 
       - name: Run and Test
-        run: |
-          cd quarkus/.scripts
-          sh run.sh & sh test.sh stop
+        run: java -jar target/conference_service_quarkus-1.0.0-runner.jar & sh .scripts/test.sh stop
 
       - name: Build with GraalVM
-        run: |
-          cd quarkus/.scripts
-          sh build.sh graalvm
+        run: ./mvnw install -Dnative -Dquarkus.native.builder-image=graalvm
 
       - name: Run and Test with GraalVM
-        run: |
-          cd quarkus/.scripts
-          sh run.sh graalvm & sh test.sh graalvm stop
+        run: target/conference_service_quarkus-1.0.0-runner & sh .scripts/test.sh graalvm stop
 
       - name: Stop Docker compose
-        run: |
-          cd quarkus
-          docker-compose down
+        run: docker-compose down
 
   springboot_build:
     name: Spring Boot Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: spring-boot
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -162,32 +140,20 @@ jobs:
             set-java-home: 'false'
 
       - name: Build
-        run: |
-          cd spring-boot/.scripts
-          sh build.sh
+        run: ./mvnw package
 
       - name: Run Docker compose
-        run: |
-          cd spring-boot
-          docker-compose up -d
+        run: docker-compose up -d
 
       - name: Run and Test
-        run: |
-          cd spring-boot/.scripts
-          sh run.sh & sh test.sh stop
+        run: java -jar target/conference_service_springboot-1.0.0.jar & sh .scripts/test.sh stop
 
       - name: Build with GraalVM
-        run: |
-          cd spring-boot/.scripts
-          sh build.sh graalvm
+        run: ./mvnw -Pnative native:compile
 
       - name: Run and Test with GraalVM
-        run: |
-          cd spring-boot/.scripts
-          sh run.sh graalvm & sh test.sh graalvm stop
+        run: target/conference_service_springboot & sh .scripts/test.sh graalvm stop
 
       - name: Stop Docker compose
-        run: |
-          cd spring-boot
-          docker-compose down
+        run: docker-compose down
   
