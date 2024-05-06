@@ -7,12 +7,6 @@ echo ""
 
 bal clean > ./.results/build.txt 2>&1
 
-if [ ! -d "./generated" ]; then
-    echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Generating persist client code"
-    echo ""
-    bal persist generate >> ./.results/build.txt 2>&1
-fi
-
 if [ "$1" = "graalvm" ];
 then
     bal build --graalvm > ./.results/build-graalvm.txt 2>&1

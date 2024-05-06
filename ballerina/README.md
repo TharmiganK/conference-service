@@ -11,7 +11,7 @@ This directory contains the Ballerina version of the Conference Service.
 
 ## Prerequisites
 
-- Install [Ballerina 2201.8.0](https://ballerina.io/downloads/).
+- Install [Ballerina 2201.9.0](https://ballerina.io/downloads/).
 - Install [VSCode](https://code.visualstudio.com/) with the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 - Install and Configure GraalVM. See the [Configure GraalVM](https://ballerina.io/learn/build-the-executable-locally/#configure-graalvm) section for more details.
 - Install [Docker](https://docs.docker.com/get-docker/).
@@ -24,14 +24,6 @@ This directory contains the Ballerina version of the Conference Service.
    ✔ Network ballerina_default  Created                   0.0s 
    ✔ Container conferencedb     Started                   0.6s 
    ✔ Container country-service  Started                   0.4s 
-  ```
-
-- Run the following command to generate database client code for the model defined in `persist` directory.
-
-  ```console
-  $ bal persist generate
-
-  Persist client and entity types generated successfully in the ./generated directory.
   ```
 
 ## Build and Run the service locally
