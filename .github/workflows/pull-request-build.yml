@@ -19,11 +19,10 @@ jobs:
       - name: Setup Ballerina
         uses: ballerina-platform/setup-ballerina@v1
         with:
-          version: 2201.8.0
+          version: 2201.9.0
     
       - name: Build
         run: |
-          bal persist generate
           bal build
 
       - name: Run Docker compose
