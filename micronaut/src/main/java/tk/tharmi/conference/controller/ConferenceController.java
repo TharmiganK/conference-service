@@ -11,6 +11,8 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Produces;
 import io.micronaut.http.annotation.Status;
+import io.micronaut.scheduling.TaskExecutors;
+import io.micronaut.scheduling.annotation.ExecuteOn;
 import jakarta.inject.Inject;
 import tk.tharmi.conference.entity.Conference;
 import tk.tharmi.conference.entity.ExtendedConference;
@@ -42,6 +44,7 @@ public class ConferenceController {
 
     @Get("/conferenceswithcountry")
     @Produces(MediaType.APPLICATION_JSON)
+    @ExecuteOn(TaskExecutors.BLOCKING)
     public List<ExtendedConference> getAllWithCountry() {
         return conferenceService.getAllWithCountry();
     }

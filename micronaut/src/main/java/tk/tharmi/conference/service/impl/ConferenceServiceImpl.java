@@ -3,8 +3,7 @@ package tk.tharmi.conference.service.impl;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.transaction.Transactional;
-
+import io.micronaut.transaction.annotation.Transactional;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import tk.tharmi.conference.client.CountryClient;
