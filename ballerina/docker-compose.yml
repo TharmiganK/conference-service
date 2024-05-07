@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mysql:
-    image: mysql:8-oracle
+    image: mysql:8.0.37
     container_name: conferencedb
     command: --default-authentication-plugin=mysql_native_password
     environment:
@@ -13,7 +13,7 @@ services:
     healthcheck:
       test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       interval: 1m30s
-      timeout: 60s
+      timeout: 20s
       retries: 5
     ports:
       - 3307:3306
