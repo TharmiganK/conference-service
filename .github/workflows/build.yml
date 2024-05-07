@@ -28,17 +28,9 @@ jobs:
           bal build
 
       - name: Run Docker compose
-        run: docker-compose up -d
-
-      - name: Check Docker Status
-        run: docker ps
-
-      - name: Check MySQL Health
         run: |
-          while [ "$(docker inspect -f {{.State.Health.Status}} conferencedb)" != "healthy" ]; do
-            echo "Waiting for MySQL to be healthy"
-            sleep 5
-          done
+          docker-compose up -d
+          sleep 120
 
       - name: Run and Test
         run: bal run target/bin/conference_service_ballerina.jar  & sh .scripts/simple-test.sh
@@ -82,17 +74,9 @@ jobs:
         run: ./mvnw package
 
       - name: Run Docker compose
-        run: docker-compose up -d
-
-      - name: Check Docker Status
-        run: docker ps
-
-      - name: Check MySQL Health
         run: |
-          while [ "$(docker inspect -f {{.State.Health.Status}} conferencedb)" != "healthy" ]; do
-            echo "Waiting for MySQL to be healthy"
-            sleep 5
-          done
+          docker-compose up -d
+          sleep 120
 
       - name: Run and Test
         run: java  -jar target/conference_service_micronaut-1.0.jar & sh .scripts/simple-test.sh
@@ -128,17 +112,9 @@ jobs:
         run: ./mvnw package -Dquarkus.package.type=uber-jar
 
       - name: Run Docker compose
-        run: docker-compose up -d
-
-      - name: Check Docker Status
-        run: docker ps
-
-      - name: Check MySQL Health
         run: |
-          while [ "$(docker inspect -f {{.State.Health.Status}} conferencedb)" != "healthy" ]; do
-            echo "Waiting for MySQL to be healthy"
-            sleep 5
-          done
+          docker-compose up -d
+          sleep 120
 
       - name: Run and Test
         run: java -jar target/conference_service_quarkus-1.0.0-runner.jar & sh .scripts/simple-test.sh
@@ -174,17 +150,9 @@ jobs:
         run: ./mvnw package
 
       - name: Run Docker compose
-        run: docker-compose up -d
-
-      - name: Check Docker Status
-        run: docker ps
-
-      - name: Check MySQL Health
         run: |
-          while [ "$(docker inspect -f {{.State.Health.Status}} conferencedb)" != "healthy" ]; do
-            echo "Waiting for MySQL to be healthy"
-            sleep 5
-          done
+          docker-compose up -d
+          sleep 120
 
       - name: Run and Test
         run: java -jar target/conference_service_springboot-1.0.0.jar & sh .scripts/simple-test.sh
