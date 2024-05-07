@@ -24,3 +24,6 @@ services:
     image: ktharmi176/country-service:latest
     container_name: country-service
     network_mode: host
+    depends_on:
+      mysql:
+        condition: service_healthy
