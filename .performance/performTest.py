@@ -40,8 +40,8 @@ for directory in directories:
     logging.info(f"Running Docker compose up in {directory}")
     subprocess.run("docker-compose up -d", shell=True, check=True)
 
-    # Wait for 30 seconds
-    time.sleep(30)
+    # Wait for 2 minutes
+    time.sleep(120)
 
     # Step 3: Run the test loop
     for i in range(9):
