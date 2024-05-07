@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mysql:
-    image: mysql:8-oracle
+    image: mysql:8.0.37
     container_name: conferencedb
     command: --default-authentication-plugin=mysql_native_password
     environment:

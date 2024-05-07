@@ -30,7 +30,10 @@ jobs:
       - name: Run Docker compose
         run: |
           docker-compose up -d
-          sleep 30
+          sleep 120
+
+      - name: Check Docker status
+        run: docker ps
 
       - name: Run and Test
         run: bal run target/bin/conference_service_ballerina.jar  & sh .scripts/simple-test.sh
@@ -76,7 +79,10 @@ jobs:
       - name: Run Docker compose
         run: |
           docker-compose up -d
-          sleep 30
+          sleep 120
+
+      - name: Check Docker status
+        run: docker ps
 
       - name: Run and Test
         run: java  -jar target/conference_service_micronaut-1.0.jar & sh .scripts/simple-test.sh
@@ -114,7 +120,10 @@ jobs:
       - name: Run Docker compose
         run: |
           docker-compose up -d
-          sleep 30
+          sleep 120
+
+      - name: Check Docker status
+        run: docker ps
 
       - name: Run and Test
         run: java -jar target/conference_service_quarkus-1.0.0-runner.jar & sh .scripts/simple-test.sh
@@ -152,7 +161,10 @@ jobs:
       - name: Run Docker compose
         run: |
           docker-compose up -d
-          sleep 30
+          sleep 120
+
+      - name: Check Docker status
+        run: docker ps
 
       - name: Run and Test
         run: java -jar target/conference_service_springboot-1.0.0.jar & sh .scripts/simple-test.sh
