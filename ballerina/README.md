@@ -235,7 +235,7 @@ Run the following script to run the application with an initialization log. The 
 - Run the JAR file
 
   ```console
-  $ echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && bal run ./target/bin/conference_service_ballerina.jar
+  $ echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && bal run ./target/bin/conference_service_ballerina.jar
 
   time=2023-09-20T13:55:19.149+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
   time=2023-09-20T13:55:19.834+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
@@ -245,7 +245,7 @@ Run the following script to run the application with an initialization log. The 
 - Run the GraalVM native executable
 
   ```console
-  $ echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && ./target/bin/conference_service_ballerina
+  $ echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && ./target/bin/conference_service_ballerina
 
   time=2023-09-20T13:54:02.134+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
   time=2023-09-20T13:54:02.194+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."

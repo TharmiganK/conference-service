@@ -2,7 +2,7 @@
 
 cd ../
 
-echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Building the Ballerina application"
+echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Building the Ballerina application"
 echo ""
 
 bal clean > ./.results/build.txt 2>&1
@@ -15,5 +15,5 @@ else
 fi
 
 echo ""
-echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Ballerina application built successfully"
+echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Ballerina application built successfully"
 echo ""

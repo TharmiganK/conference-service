@@ -43,12 +43,6 @@ jobs:
           mv wrk wrk2
           sudo cp wrk2 /usr/local/bin
 
-      - name: Replace `gdate` usage with `date`
-        run: |
-          sed -i 's/gdate/date/g' run.sh
-          sed -i 's/gdate/date/g' build.sh
-        working-directory: ballerina/.scripts
-
       - name: Run Performance Test
         run: python3 performTest.py
         working-directory: .performance

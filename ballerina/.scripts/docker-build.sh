@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Building the Ballerina docker image"
+echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Building the Ballerina docker image"
 echo ""
 
 if [ "$1" = "graalvm" ];
@@ -13,6 +13,6 @@ else
 fi
 
 echo ""
-echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Ballerina docker image built successfully"
+echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=Ballerina docker image built successfully"
 echo ""
 sleep 5
