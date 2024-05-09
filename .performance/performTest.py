@@ -38,7 +38,7 @@ for directory in directories:
 
     # Run Docker compose up
     logging.info(f"Running Docker compose up in {directory}")
-    subprocess.run("docker compose up -d", shell=True, check=True)
+    subprocess.run("docker-compose up -d", shell=True, check=True)
 
     # Wait for 2 minutes
     time.sleep(120)
@@ -123,7 +123,7 @@ for directory in directories:
 
     # Run Docker compose down
     logging.info(f"Running Docker compose down in {directory}")
-    subprocess.run("docker compose down", shell=True, check=True)
+    subprocess.run("docker-compose down", shell=True, check=True)
 
     # Wait for 20 seconds
     time.sleep(20)
