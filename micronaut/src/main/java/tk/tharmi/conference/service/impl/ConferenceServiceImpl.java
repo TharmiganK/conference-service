@@ -3,10 +3,9 @@ package tk.tharmi.conference.service.impl;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.transaction.Transactional;
-
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
+import jakarta.transaction.Transactional;
 import tk.tharmi.conference.client.CountryClient;
 import tk.tharmi.conference.entity.Conference;
 import tk.tharmi.conference.entity.Country;
@@ -35,7 +34,7 @@ public class ConferenceServiceImpl implements ConferenceService {
     }
 
     @Override
-    @Transactional
+    @jakarta.transaction.Transactional
     public void create(Conference conference) {
         conferenceRepository.save(conference);
     }

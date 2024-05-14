@@ -26,7 +26,7 @@ jobs:
       - name: Setup Ballerina
         uses: ballerina-platform/setup-ballerina@v1
         with:
-          version: 2201.8.0
+          version: 2201.9.0
 
       - name: Setup `wrk`
         run: |
@@ -42,12 +42,6 @@ jobs:
           make
           mv wrk wrk2
           sudo cp wrk2 /usr/local/bin
-
-      - name: Replace `gdate` usage with `date`
-        run: |
-          sed -i 's/gdate/date/g' run.sh
-          sed -i 's/gdate/date/g' build.sh
-        working-directory: ballerina/.scripts
 
       - name: Run Performance Test
         run: python3 performTest.py

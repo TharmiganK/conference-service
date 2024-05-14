@@ -11,7 +11,7 @@ This directory contains the Ballerina version of the Conference Service.
 
 ## Prerequisites
 
-- Install [Ballerina 2201.8.0](https://ballerina.io/downloads/).
+- Install [Ballerina 2201.9.0](https://ballerina.io/downloads/).
 - Install [VSCode](https://code.visualstudio.com/) with the [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 - Install and Configure GraalVM. See the [Configure GraalVM](https://ballerina.io/learn/build-the-executable-locally/#configure-graalvm) section for more details.
 - Install [Docker](https://docs.docker.com/get-docker/).
@@ -24,14 +24,6 @@ This directory contains the Ballerina version of the Conference Service.
    ✔ Network ballerina_default  Created                   0.0s 
    ✔ Container conferencedb     Started                   0.6s 
    ✔ Container country-service  Started                   0.4s 
-  ```
-
-- Run the following command to generate database client code for the model defined in `persist` directory.
-
-  ```console
-  $ bal persist generate
-
-  Persist client and entity types generated successfully in the ./generated directory.
   ```
 
 ## Build and Run the service locally
@@ -243,7 +235,7 @@ Run the following script to run the application with an initialization log. The 
 - Run the JAR file
 
   ```console
-  $ echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && bal run ./target/bin/conference_service_ballerina.jar
+  $ echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && bal run ./target/bin/conference_service_ballerina.jar
 
   time=2023-09-20T13:55:19.149+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
   time=2023-09-20T13:55:19.834+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."
@@ -253,7 +245,7 @@ Run the following script to run the application with an initialization log. The 
 - Run the GraalVM native executable
 
   ```console
-  $ echo "time=$(gdate +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && ./target/bin/conference_service_ballerina
+  $ echo "time=$(date +"%Y-%m-%dT%H:%M:%S.%3N%:z") level=INFO module=tharmigan/conference_service_ballerina message=\"Executing the Ballerina application\"" && ./target/bin/conference_service_ballerina
 
   time=2023-09-20T13:54:02.134+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Executing the Ballerina application"
   time=2023-09-20T13:54:02.194+05:30 level=INFO module=tharmigan/conference_service_ballerina message="Starting the listener..."

@@ -1,7 +1,7 @@
 import ballerina/http;
 
 # Represents a Error Detail
-# 
+#
 # + message - The message of the error
 # + cause - The cause of the error
 public type ErrorDetail record {|
@@ -10,7 +10,7 @@ public type ErrorDetail record {|
 |};
 
 # Represents a Internal Server Error Response
-# 
+#
 # + body - The body of the response
 public type ConferenceServerError record {|
     *http:InternalServerError;
