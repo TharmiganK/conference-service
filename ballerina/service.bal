@@ -60,10 +60,11 @@ service class ConferenceService {
 
         do {
             stream<db:Conference, persist:Error?> conferenceStream = conferenceDBClient->/conferences;
-            return check from db:Conference conference in conferenceStream select {
-                name: conference.name,
-                country: check self.getCountry(conference.name)
-            };
+            return check from db:Conference conference in conferenceStream
+                select {
+                    name: conference.name,
+                    country: check self.getCountry(conference.name)
+                };
         } on fail error err {
             return {
                 body: {
