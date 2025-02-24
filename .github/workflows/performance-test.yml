@@ -1,6 +1,18 @@
 name: Performance Test
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      ballerina-version:
+        description: 'Ballerina version to use'
+        required: false
+        default: 'nightly'
+        type: string
+      java-version:
+        description: 'Java version to use'
+        required: false
+        type: string
+        default: '21'
 
 jobs:
   performance-test:
@@ -13,7 +25,7 @@ jobs:
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
         with:
-            java-version: '17'
+            java-version: '${{ inputs.java-version || 21 }}'
             distribution: 'graalvm-community'
             github-token: ${{ secrets.GITHUB_TOKEN }}
             set-java-home: 'true'
@@ -26,7 +38,7 @@ jobs:
       - name: Setup Ballerina
         uses: ballerina-platform/setup-ballerina@v1
         with:
-          version: 2201.8.0
+          version: ${{ inputs.ballerina-version || nightly }}
 
       - name: Setup `wrk`
         run: |
